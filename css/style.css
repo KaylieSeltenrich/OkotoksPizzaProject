@@ -1,1 +1,91 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(80px, 1fr))[2];
+      grid-template-columns: repeat(2, minmax(80px, 1fr));
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  min-height: 10vh;
+  text-align: center;
+  background-color: #F8C032;
+}
+
+#header img {
+  margin: 10px;
+  width: 60%;
+}
+
+#header h2 {
+  font-size: 1em;
+}
+
+#navbar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(10px, 1fr))[3];
+      grid-template-columns: repeat(3, minmax(10px, 1fr));
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 100vw;
+  min-height: 5vh;
+  background-color: #D10000;
+}
+
+#navbar a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#content {
+  height: 80vh;
+}
+
+#content h1 {
+  font-size: 1em;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  color: black;
+}
+
+#content p {
+  margin: 10px;
+  padding: 10px;
+}
+
+#content img {
+  display: block;
+  width: 80vw;
+  margin: auto;
+  padding: 10px;
+}
+
+#footer {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  min-height: 5vh;
+  text-align: center;
+  background-color: #D10000;
+  font-size: small;
+}
+/*# sourceMappingURL=style.css.map */
