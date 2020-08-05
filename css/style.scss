@@ -18,10 +18,18 @@ background-color: #F8C032 ;
 img {
     margin: 10px;
     width: 60%;
+
 }
 
 h2 {
-    font-size: 1em;
+    font-size: 2em;
+    
+    a {
+        text-decoration: none;
+        color: red;
+        background-color: yellow;
+        padding: 3px;
+    }
 }
 
 }
@@ -37,14 +45,22 @@ width: 100vw;
 min-height: 5vh;
 background-color: #D10000;
 
+
 a { 
     color:black;
     font-weight: bold;
     text-decoration: none;
+
+    &:hover {
+        color: yellow;
+        background-color: #4b0808;
+        margin: 10px;
+    }
     
 }
 
 }
+
 
 #content {
    
