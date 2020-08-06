@@ -14,7 +14,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100vw;
+  width: 100%;
   min-height: 10vh;
   text-align: center;
   background-color: #F8C032;
@@ -48,7 +48,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  width: 100vw;
+  width: 100%;
   min-height: 5vh;
   background-color: #D10000;
 }
@@ -89,13 +89,32 @@
   padding: 10px;
 }
 
+#grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(50px, 1fr))[2];
+      grid-template-columns: repeat(2, minmax(50px, 1fr));
+  width: 100%;
+}
+
+#grid-container .menu-image {
+  width: 30vw;
+  margin: 10px;
+  padding: 10px;
+}
+
+#grid-container .menu-description {
+  width: 80%;
+  padding: 10px;
+}
+
 #footer {
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
+  width: 100%;
   min-height: 5vh;
   text-align: center;
   background-color: #D10000;

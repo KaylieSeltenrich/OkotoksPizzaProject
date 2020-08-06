@@ -10,10 +10,10 @@ display: grid;
 grid-template-columns: repeat(2, minmax(80px,1fr));
 align-items: center;
 justify-content: center;
-width: 100vw;
+width: 100%;
 min-height: 10vh;
 text-align: center;
-background-color: #F8C032 ;
+background-color: #F8C032;
 
 img {
     margin: 10px;
@@ -41,7 +41,7 @@ grid-template-columns: repeat(3, minmax(10px,1fr));
 align-items: center;
 justify-content: center;
 text-align: center;
-width: 100vw;
+width: 100%;
 min-height: 5vh;
 background-color: #D10000;
 
@@ -81,10 +81,29 @@ a {
 
     }
 
+
     img {
         display: block;
         width: 80vw;
         margin: auto;
+        padding: 10px;
+    }
+    
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(50px,1fr)); 
+    width: 100%;
+
+    .menu-image {
+        width:30vw;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .menu-description {
+        width:80%;
         padding: 10px;
     }
 
@@ -93,7 +112,7 @@ a {
 #footer {
     display: grid;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     min-height: 5vh;
     text-align: center;
     background-color: #D10000;
