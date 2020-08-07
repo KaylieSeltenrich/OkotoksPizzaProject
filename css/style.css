@@ -3,6 +3,13 @@
   padding: 0;
 }
 
+h1 {
+  color: #4b0808;
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+}
+
 #header {
   display: -ms-grid;
   display: grid;
@@ -26,7 +33,7 @@
 }
 
 #header h2 {
-  font-size: 2em;
+  font-size: 1em;
 }
 
 #header h2 a {
@@ -89,23 +96,81 @@
   padding: 10px;
 }
 
-#grid-container {
+#grid-container > .seperator {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(50px, 1fr))[2];
-      grid-template-columns: repeat(2, minmax(50px, 1fr));
-  width: 100%;
+  -ms-grid-columns: (minmax(140px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #4b0808;
 }
 
-#grid-container .menu-image {
-  width: 30vw;
-  margin: 10px;
-  padding: 10px;
+#grid-container > .seperator h3 {
+  display: -ms-grid;
+  display: grid;
+  font-size: 0.8em;
+  text-align: center;
+  background-color: #4b0808;
+  color: white;
+  margin: 3%;
+  width: 95%;
+  top: 0%;
+  height: 30vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#grid-container .menu-description {
-  width: 80%;
-  padding: 10px;
+#grid-container > .seperator #card-container {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+}
+
+#grid-container > .seperator .menu-image {
+  width: 95%;
+  margin: 3%;
+  height: 30vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu-description {
+  display: -ms-grid;
+  display: grid;
+  position: absolute;
+  margin: 3%;
+  width: 95%;
+  top: 0%;
+  height: 30vh;
+  opacity: 0;
+  text-align: center;
+  font-size: 0.8em;
+  background-color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.menu-description:active {
+  background-color: rgba(255, 255, 255, 0.8);
+  opacity: 1;
 }
 
 #footer {
