@@ -8,6 +8,7 @@ h1 {
   text-align: center;
   margin: auto;
   padding: 10px;
+  font-family: "Asap", sans-serif;
 }
 
 #header {
@@ -25,6 +26,7 @@ h1 {
   min-height: 10vh;
   text-align: center;
   background-color: #ffe6a7;
+  font-family: "Magra", sans-serif;
 }
 
 #header img {
@@ -72,6 +74,7 @@ h1 {
   background-color: #c3a068;
   top: 0;
   z-index: 100;
+  font-family: "Magra", sans-serif;
 }
 
 #navbar a {
@@ -97,6 +100,7 @@ h1 {
   padding: 10px;
   color: #D10000;
   border: solid #D10000 1px;
+  font-family: "Asap", sans-serif;
 }
 
 #content p {
@@ -106,6 +110,7 @@ h1 {
   text-align: justify;
   z-index: 1;
   background: white;
+  font-family: "Asar", serif;
 }
 
 #content p a {
@@ -114,6 +119,7 @@ h1 {
   font-size: 1.2em;
   font-weight: bold;
   color: #777777;
+  font-family: "Asap", sans-serif;
 }
 
 #content p a:active {
@@ -125,6 +131,7 @@ h1 {
   text-align: center;
   padding: 10px;
   width: 80%;
+  font-family: "Asar", serif;
 }
 
 #content #pizza-image {
@@ -191,6 +198,7 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: "Asap", sans-serif;
 }
 
 #grid-container > .seperator #card-container {
@@ -227,6 +235,7 @@ h1 {
           align-items: center;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
+  font-family: "Asar", serif;
 }
 
 .menu-description:active {
@@ -246,5 +255,6 @@ h1 {
   text-align: center;
   background-color: #c3a068;
   font-size: small;
+  font-family: "Asap", sans-serif;
 }
 /*# sourceMappingURL=style.css.map */

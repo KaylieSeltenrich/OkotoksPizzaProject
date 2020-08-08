@@ -1,3 +1,5 @@
+@import '_variables';
+
 * {
     margin:0;
     padding:0;
@@ -8,6 +10,8 @@ h1 {
     text-align: center;
     margin: auto;
     padding: 10px;
+    font-family: $header-fontstyle;
+
       
 }
 
@@ -21,6 +25,7 @@ width: 100%;
 min-height: 10vh;
 text-align: center;
 background-color: #ffe6a7;
+font-family: $other-fontstyle;
 
 img {
     margin: 10px;
@@ -34,6 +39,7 @@ h2 {
     color: black;
     align-items: center;
     width:90%;
+    
    
     
     a {
@@ -65,7 +71,7 @@ min-height: 7vh;
 background-color: #c3a068;
 top:0;
 z-index:100;
-
+font-family: $other-fontstyle;
 
 a { 
     color:black;
@@ -95,6 +101,8 @@ a {
         padding: 10px;
         color:#D10000;
         border: solid #D10000 1px;
+        font-family: $header-fontstyle;
+
 
     }
     
@@ -106,15 +114,19 @@ a {
         text-align: justify; 
         z-index: 1;
         background: white;
-
+        font-family: $paragraph-fontstyle;
+        
+        
       
 
-        a{
+        a {
             text-align: center;
             display: block;
             font-size: 1.2em;
             font-weight: bold;
             color: rgb(119, 119, 119);
+            font-family: $header-fontstyle;
+
 
             
 
@@ -131,8 +143,7 @@ a {
         text-align: center;
         padding:10px;
         width: 80%;
-        
-    
+        font-family: $paragraph-fontstyle;
        }
 
      #pizza-image {
@@ -186,6 +197,7 @@ a {
     justify-content: center;
     align-items: center;
     background-color:#4b0808;
+    
  
 
     h3 {
@@ -200,6 +212,8 @@ a {
         height: 30vh;
         justify-content: center;
         align-items: center;
+        font-family: $header-fontstyle;
+       
     }
 
    
@@ -239,7 +253,7 @@ a {
         justify-content: center;
         align-items: center;
         transition: all 0.25s ease-in-out;
-        
+        font-family: $paragraph-fontstyle;
 
         &:active {
             background-color: rgba(255, 255, 255, 0.8);
@@ -259,6 +273,7 @@ a {
     text-align: center;
     background-color: #c3a068;
     font-size: small;
+    font-family: $header-fontstyle;
 
 
 }
