@@ -97,7 +97,7 @@ a {
         border: solid #D10000 1px;
 
     }
-
+    
     
     p {
        position: relative;
@@ -106,9 +106,34 @@ a {
         text-align: justify; 
         z-index: 1;
         background: white;
+
+      
+
+        a{
+            text-align: center;
+            display: block;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: rgb(119, 119, 119);
+
+            
+
+            &:active {
+                color: #D10000;
+            }
+ 
+        }
        
-        
     }
+  
+    h1 > p {
+        font-size: 0.7em;
+        text-align: center;
+        padding:10px;
+        width: 80%;
+        
+    
+       }
 
      #pizza-image {
 
