@@ -24,7 +24,7 @@ h1 {
   width: 100%;
   min-height: 10vh;
   text-align: center;
-  background-color: #F8C032;
+  background-color: #ffe6a7;
 }
 
 #header img {
@@ -33,21 +33,33 @@ h1 {
 }
 
 #header h2 {
+  display: -ms-grid;
+  display: grid;
   font-size: 1em;
+  color: black;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
 }
 
 #header h2 a {
+  font-size: 1.5em;
   text-decoration: none;
-  color: red;
-  background-color: yellow;
-  padding: 3px;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  padding: 5px;
+  margin: 5px;
+  background-color: #ff3c00;
 }
 
 #navbar {
+  position: -webkit-sticky;
+  position: sticky;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(10px, 1fr))[3];
-      grid-template-columns: repeat(3, minmax(10px, 1fr));
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -56,8 +68,10 @@ h1 {
           justify-content: center;
   text-align: center;
   width: 100%;
-  min-height: 5vh;
-  background-color: #D10000;
+  min-height: 7vh;
+  background-color: #a12e2e;
+  top: 0;
+  z-index: 5;
 }
 
 #navbar a {
@@ -67,7 +81,7 @@ h1 {
 }
 
 #navbar a:hover {
-  color: yellow;
+  color: white;
   background-color: #4b0808;
   margin: 10px;
 }
@@ -198,9 +212,9 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  min-height: 5vh;
+  min-height: 7vh;
   text-align: center;
-  background-color: #D10000;
+  background-color: #a12e2e;
   font-size: small;
 }
 /*# sourceMappingURL=style.css.map */
