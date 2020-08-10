@@ -1,0 +1,36 @@
+@mixin tablet-layout-header() {
+    @media only screen and (min-width:600px) {
+      
+        font-size: 2em;
+              
+    }
+    
+}
+
+    @mixin tablet-layout-navbar() {
+        @media only screen and (min-width:600px) {
+          
+            font-size:2em;
+                
+            }
+            
+        }
+
+        @mixin tablet-layout-content() {
+
+            @media only screen and (min-width:600px) {
+          
+                font-size: 1.5em;
+                    
+                }
+
+        }
+
+    
+
+        
+        
+    
+    
+
+
