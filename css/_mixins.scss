@@ -1,4 +1,4 @@
-@mixin tablet-layout-header() {
+@mixin tablet-layout-fontnav() {
     @media only screen and (min-width:600px) {
       
         font-size: 2em;
@@ -7,24 +7,38 @@
     
 }
 
-    @mixin tablet-layout-navbar() {
-        @media only screen and (min-width:600px) {
-          
-            font-size:2em;
-                
-            }
-            
-        }
 
-        @mixin tablet-layout-content() {
+@mixin tablet-layout-fontheader() {
+    @media only screen and (min-width:600px) {
+      
+        font-size: 3em;
+              
+    }
+    
+}
 
-            @media only screen and (min-width:600px) {
-          
-                font-size: 1.5em;
-                    
-                }
+@mixin tablet-layout-fontboldheader() {
+    @media only screen and (min-width:600px) {
+      
+        font-size: 2em;
+              
+    }
+    
+}
 
-        }
+
+@mixin tablet-layout-fontmenu() {
+    @media only screen and (min-width:600px) {
+      
+        font-size: 1em;
+              
+    }
+    
+}
+
+        
+
+        
 
     
 

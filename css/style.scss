@@ -12,6 +12,7 @@ h1 {
     text-align: center;
     margin: 20px;
     font-family: $header-fontstyle;
+    @include tablet-layout-fontheader();
       
 }
 
@@ -26,7 +27,8 @@ min-height: 10vh;
 text-align: center;
 background-color: #ffe6a7;
 font-family: $other-fontstyle;
-@include tablet-layout-header();
+@include tablet-layout-fontnav();
+
 
 
 img {
@@ -41,6 +43,7 @@ h2 {
     color: black;
     align-items: center;
     width:90%;
+    
     
     
    
@@ -75,7 +78,8 @@ background-color: #c3a068;
 top:0;
 z-index:100;
 font-family: $other-fontstyle;
-@include tablet-layout-navbar();
+@include tablet-layout-fontnav();
+
 
 
 a { 
@@ -98,7 +102,7 @@ a {
 #content {
    
     height: auto;
-    @include tablet-layout-content();
+    
    
 
     .boldheader {
@@ -109,6 +113,7 @@ a {
         color:#D10000;
         border: solid #D10000 1px;
         font-family: $header-fontstyle;
+        @include tablet-layout-fontboldheader();
 
 
     }
@@ -280,6 +285,7 @@ a {
         align-items: center;
         transition: all 0.25s ease-in-out;
         font-family: $paragraph-fontstyle;
+        @include tablet-layout-fontmenu();
         
         &:active {
             background-color: rgba(255, 255, 255, 0.8);

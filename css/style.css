@@ -10,6 +10,12 @@ h1 {
   font-family: "Asap", sans-serif;
 }
 
+@media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 3em;
+  }
+}
+
 #header {
   display: -ms-grid;
   display: grid;
@@ -104,12 +110,6 @@ h1 {
   height: auto;
 }
 
-@media only screen and (min-width: 600px) {
-  #content {
-    font-size: 1.5em;
-  }
-}
-
 #content .boldheader {
   font-size: 1em;
   text-align: center;
@@ -118,6 +118,12 @@ h1 {
   color: #D10000;
   border: solid #D10000 1px;
   font-family: "Asap", sans-serif;
+}
+
+@media only screen and (min-width: 600px) {
+  #content .boldheader {
+    font-size: 2em;
+  }
 }
 
 #content p {
@@ -272,6 +278,12 @@ h1 {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
   font-family: "Asar", serif;
+}
+
+@media only screen and (min-width: 600px) {
+  .menu-description {
+    font-size: 1em;
+  }
 }
 
 .menu-description:active {
