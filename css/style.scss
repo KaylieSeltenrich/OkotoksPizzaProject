@@ -8,8 +8,7 @@
 h1 {
     color: #4b0808;
     text-align: center;
-    margin: auto;
-    padding: 30px;
+    margin: 20px;
     font-family: $header-fontstyle;
 
       
@@ -109,23 +108,26 @@ a {
     
     p {
        position: relative;
+       font-weight: bold;
         margin:auto;
-        padding:30px;
+        padding:20px;
         text-align: justify; 
         z-index: 1;
         background: white;
+        font-size: 0.9em;
         font-family: $paragraph-fontstyle;
         
         
       
 
-        a {
+        a{
             text-align: center;
             display: block;
-            font-size: 1.2em;
+            font-size: 0.9em;
             font-weight: bold;
             color: rgb(119, 119, 119);
             font-family: $header-fontstyle;
+            margin: 5vw;
 
 
             
@@ -139,28 +141,41 @@ a {
     }
   
     h1 > p {
-        font-size: 0.7em;
+        font-size: 0.8em;
         text-align: center;
-        padding:10px;
+        padding: 5px;
         width: 80%;
         font-family: $paragraph-fontstyle;
        }
 
-     #pizza-image {
+     .rounded-image {
 
-        position: relative;
         display: block;
-        width: 95%;
-        height:55vh;
-        bottom: 20vh;
-        top:0vh;
+        width: 90%;
+        height: 60vh;
         object-fit: cover;
+        object-position: 20% 20%;
         margin: auto;
         border-radius: 10%;
-        
+
     
     }
 
+    #pizza-image {
+        position: relative;
+        display: block;
+        width: 90%;
+        height: 50vh;
+        bottom: 5vh;
+        object-fit: cover;
+        object-position: 40% 40%;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        border-radius: 5%;
+      
+    
+    }
+    
     
     }
 
@@ -171,6 +186,7 @@ a {
         position: relative;
         overflow: hidden;
         width: 100%;
+        height: 30vh;
         padding-top: 56.25%; 
      
  .responsive-iframe {
@@ -180,7 +196,8 @@ a {
   left: 0;
   bottom: 0;
   right: 0;
-  width: 100%;
+  margin: 5vw;
+  width: 90%;
   height: 100%;
 
     }
@@ -209,7 +226,7 @@ a {
         margin:3%;
         width: 95%;
         top: 0%;
-        height: 30vh;
+        height: 50vh;
         justify-content: center;
         align-items: center;
         font-family: $header-fontstyle;
