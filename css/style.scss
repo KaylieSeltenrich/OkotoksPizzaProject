@@ -287,7 +287,9 @@ a {
         align-items: center;
         transition: all 0.25s ease-in-out;
         font-family: $paragraph-fontstyle;
-        @include tablet-layout-fontmenu();
+        @include tablet-layout-fontdescription();
+       
+    
         
         &:active {
             background-color: rgba(255, 255, 255, 0.8);
@@ -299,7 +301,8 @@ a {
        .menu-name {
            margin:3%;
            color: white;
-           font-size: 1em;
+           font-size: 1.5em;
+          
        }
 
 
@@ -320,6 +323,14 @@ a {
 
 @media only screen and (min-width:600px) {
 
+#header {
+    
+     h2 > p {
+        display: none;
+    }
+}
+
+
 #content > #pizza-image
 
 {
@@ -336,9 +347,12 @@ a {
 
 }
 
+
+
+
     #grid-container > .seperator {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(2, minmax(250px,1fr));
     width: 90%;
     margin-left: 5%;
     margin-top: 5vh;
