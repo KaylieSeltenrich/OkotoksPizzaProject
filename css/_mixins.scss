@@ -1,7 +1,7 @@
 @mixin tablet-layout-fontnav() {
     @media only screen and (min-width:600px) {
       
-        font-size: 2em;
+        font-size: 1em;
               
     }
     
@@ -11,7 +11,7 @@
 @mixin tablet-layout-fontheader() {
     @media only screen and (min-width:600px) {
       
-        font-size: 3em;
+        font-size: 2em;
               
     }
     
@@ -36,7 +36,15 @@
     
 }
 
-        
+
+@mixin tablet-layout-fontparagraph() {
+    @media only screen and (min-width:600px) {
+      
+        font-size: 0.8em;
+              
+    }
+    
+}
 
         
 

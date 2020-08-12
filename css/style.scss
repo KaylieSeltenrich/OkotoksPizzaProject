@@ -42,7 +42,7 @@ h2 {
     font-size: 1em;
     color: black;
     align-items: center;
-    width:90%;
+    width:95%;
     
     
     
@@ -108,8 +108,8 @@ a {
     .boldheader {
         font-size: 1em;
         text-align: center;
-        margin: 10px;
-        padding: 10px;
+        margin: 5px;
+        padding: 5px;
         color:#D10000;
         border: solid #D10000 1px;
         font-family: $header-fontstyle;
@@ -122,25 +122,29 @@ a {
     p {
        position: relative;
        font-weight: bold;
+        width: 90%;
         margin:auto;
         padding:20px;
         text-align: justify; 
         z-index: 1;
-        background: white;
-        font-size: 0.9em;
+        background-color: white;
+        font-size: 0.8em;
         font-family: $paragraph-fontstyle;
+        @include tablet-layout-fontparagraph ();
         
         
       
 
-        a{
+        a {
             text-align: center;
             display: block;
-            font-size: 0.9em;
+            font-size: 1.2em;
+            padding: 2%;
             font-weight: bold;
-            color: rgb(119, 119, 119);
+            color: rgb(146, 146, 146);
             font-family: $header-fontstyle;
-            margin: 5vw;
+            
+            
 
 
             
@@ -179,11 +183,9 @@ a {
         display: block;
         width: 90%;
         height: 50vh;
-        bottom: 5vh;
         object-fit: cover;
         object-position: 40% 40%;
-        margin-left: 5vw;
-        margin-right: 5vw;
+        margin: 5vw;
         border-radius: 5%;
       
     
@@ -221,7 +223,7 @@ a {
 
 #grid-container > .seperator {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
     width: 90%;
     margin-left: 5%;
     margin-top: 5vh;
@@ -233,17 +235,17 @@ a {
 
     h3 {
         display: grid;
-        font-size: 1.5em;
         text-align: center;
         background-color: #4b0808;
         color: white;
         margin:3%;
         width: 95%;
         top: 0%;
-        height: 50vh;
+        height: 30vh;
         justify-content: center;
         align-items: center;
         font-family: $header-fontstyle;
+        @include tablet-layout-fontmenu();
        
     }
 
@@ -316,6 +318,39 @@ a {
    
 }
 
+@media only screen and (min-width:600px) {
+
+#content > #pizza-image
+
+{
+    position: relative;
+    display: block;
+    width: 90%;
+    height: 80vh;
+    bottom: 10vh;
+    object-fit: cover;
+    object-position: 40% 40%;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    border-radius: 5%;
+
+}
+
+    #grid-container > .seperator {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5vh;
+    justify-content: center;
+    align-items: center;
+    background-color:#4b0808;
+    
+ 
+}
+
+
+}
 
 
  
