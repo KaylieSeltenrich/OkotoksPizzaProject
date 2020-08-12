@@ -56,13 +56,17 @@ h1 {
   width: 95%;
 }
 
-#header h2 a {
+#header h2 .regular {
+  display: none;
+}
+
+#header h2 .clickable {
   font-size: 1.5em;
   text-decoration: none;
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  padding: 5px;
-  margin: 5px;
+  padding: 3px;
+  margin: 3px;
   background-color: #D10000;
 }
 
@@ -141,7 +145,7 @@ h1 {
 
 @media only screen and (min-width: 600px) {
   #content p {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }
 
@@ -165,6 +169,12 @@ h1 {
   padding: 5px;
   width: 80%;
   font-family: "Asar", serif;
+}
+
+@media only screen and (min-width: 600px) {
+  #content h1 > p {
+    font-size: 1em;
+  }
 }
 
 #content .rounded-image {
@@ -325,6 +335,19 @@ h1 {
 @media only screen and (min-width: 600px) {
   #header h2 > p {
     display: none;
+  }
+  #header .clickable {
+    display: none;
+  }
+  #header h2 > .regular {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    padding: 3px;
+    margin: 3px;
+    background-color: #D10000;
+    display: block;
   }
   #content > #pizza-image {
     position: relative;

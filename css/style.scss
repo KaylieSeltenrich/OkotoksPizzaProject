@@ -44,26 +44,19 @@ h2 {
     align-items: center;
     width:95%;
     
-    
-    
-   
-    
-    a {
-        font-size: 1.5em;
-        text-decoration: none;
-        color: white;
-        text-shadow: -1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
-        padding: 5px;
-        margin:5px;
-        background-color: #D10000;
-    
+    .regular {
+        display: none;
     }
-}
+    
+    .clickable {
+     @include phonenumber-style();  
+    }
+
+ }
 
 }
+
+
 
 #navbar {
 position: sticky;
@@ -163,7 +156,9 @@ a {
         padding: 5px;
         width: 80%;
         font-family: $paragraph-fontstyle;
-       }
+        @include tablet-layout-fontparagraph();
+       
+    }
 
      .rounded-image {
 
@@ -327,7 +322,20 @@ a {
     
      h2 > p {
         display: none;
+
     }
+
+    .clickable {
+        display: none;
+    }
+
+    h2 > .regular {
+        @include phonenumber-style();  
+        display: block;
+
+    }
+
+    
 }
 
 
@@ -351,6 +359,7 @@ a {
 
 
     #grid-container > .seperator {
+
     display: grid;
     grid-template-columns: repeat(2, minmax(250px,1fr));
     width: 90%;
