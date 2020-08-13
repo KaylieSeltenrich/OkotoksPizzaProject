@@ -17,16 +17,18 @@ h1 {
       
 }
 
+
+
 /* Header rules  */
 
 #header {
 
 display: grid;
-grid-template-columns: repeat(2, minmax(250px,1fr));
+grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
 align-items: center;
 justify-content: center;
 width: 100%;
-min-height: 5vh;
+min-height: 10vh;
 text-align: center;
 background-color: #ffe6a7;
 font-family: $other-fontstyle;
@@ -34,65 +36,67 @@ font-family: $other-fontstyle;
 
 
 
+
+
 img {
-    margin: 10px;
-    width: 20%;
+    left: 15vw;
+    width: 25%;
+    z-index:100;
+   
 
 }
 
 h2 {
-    display: grid;
-    font-size: 1em;
-    color: black;
-    align-items: center;
-    width:95%;
+    display: none;
     
-    .regular {
-        display: none;
-    }
-    
+   
     .clickable {
-     @include phonenumber-style();  
+     @include phonenumber-style();
+     display:none;
     }
-
- }
 
 }
+
+
+#navbar-desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    min-height: 10vh;
+    background-color: #c3a068;
+    top:0;
+    z-index:100;
+    font-family: $other-fontstyle;
+    @include desktop-layout-fontnav();
+
+    a { 
+        color:black;
+        font-weight: bold;
+        text-decoration: none;
+    
+    
+        &:hover {
+            color: white;
+            background-color: #4b0808;
+            margin: 10px;
+        }
+
+    }
+
+}
+}
+
+
 
 /* Navigation bar rules  */
 
 #navbar {
-position: sticky;
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr; 
-align-items: center;
-justify-content: center;
-text-align: center;
-width: 100%;
-min-height: 7vh;
-background-color: #c3a068;
-top:0;
-z-index:100;
-font-family: $other-fontstyle;
-@include tablet-layout-fontnav();
-
-/* Navigation links  */
-
-a { 
-    color:black;
-    font-weight: bold;
-    text-decoration: none;
-
-
-    &:hover {
-        color: white;
-        background-color: #4b0808;
-        margin: 10px;
-    }
-    
+    display: none;
 }
 
-}
 
 /* Content Rules */
 
@@ -103,14 +107,18 @@ a {
    /* Header that displays important info meant to stand out on front of page  */
 
     .boldheader {
+        position: relative;
+        width: 50%;
+        left: 25%;
+        right: 25%;
         font-size: 1em;
         text-align: center;
-        margin: 5px;
-        padding: 5px;
         color:#D10000;
         border: solid #D10000 1px;
+        background-color: white;
         font-family: $header-fontstyle;
         @include tablet-layout-fontboldheader();
+        z-index: 5;
 
 
     }
@@ -118,13 +126,13 @@ a {
     /* Regular paragraph font styling  */
 
     p {
-       
+        position: relative;
+        top: 20vh;
         font-weight: bold;
-        width: 85%;
-        margin: 5%;
-        padding: 10px;
+        margin: 10%;
+        width: 100%;
         text-align: justify; 
-        z-index: 1;
+        z-index: 2;
         background-color: white;
         font-size: 0.9em;
         font-family: $paragraph-fontstyle;
@@ -156,7 +164,7 @@ a {
     h1 {
        
         p {
-
+      
         font-size: 0.5em;
         text-align: center;
         padding: 5px;
@@ -178,13 +186,13 @@ a {
         }
 
     }
-
+}
     
     
     
     /* Image styling */
     
-}
+
      .rounded-image {
 
         display: block;
@@ -194,20 +202,21 @@ a {
         object-position: 20% 20%;
         margin: auto;
         border-radius: 10%;
-
+        
     
     }
 
     #pizza-image {
 
+        position: absolute;
         display: block;
-        width: 95%;
-        height: 50vh;
+        bottom: 15vh;
+        width: 100%;
+        height: 35vh;
         object-fit: cover;
         object-position: 40% 40%;
-        margin-top: 10vw;
-        margin-bottom: 10vw;
-        border-radius: 5%;
+        z-index: -1;
+        border-radius: 0%;
       
     
     }
@@ -327,7 +336,9 @@ a {
 /* Footer Rules */
 
 #footer {
-    
+    z-index: 100;
+    position: fixed; 
+    bottom: 0;
     margin-top: 10vh;
     display: grid;
     align-items: center;
@@ -342,95 +353,4 @@ a {
    
 }
 
-/* Tablet display only  */
 
-@media only screen and (min-width:600px) {
-   
-h1 {
-    margin: 10vh;
-}
-
-#header {
-    
-    /* Making phone link no longer clickable  */
-
-     h2 > p {
-        display: none;
-
-    }
-
-    .clickable {
-        display: none;
-    }
-
-    h2 > .regular {
-        @include phonenumber-style();  
-        display: block;
-
-    }
-   
-    img {
-        position: relative;
-        left: 30px;
-        margin: 15px;
-        width: 50%;
-        
-    
-    }
-    
-}
-
-
-#content > #pizza-image
-
-{
-    position: relative;
-    display: block;
-    width: 90%;
-    height: 80vh;
-    bottom: 10vh;
-    object-fit: cover;
-    object-position: 40% 40%;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    border-radius: 5%;
-
-}
-
-#content > p {
-
-    padding:30px;
-    margin:30px;
-}
-
-#content >  h1 p {
-
-    width: 90%;
-
-    
-}
-
-#content > h1 {
-
-margin: 5vh;
-}
-
-#content > .boldheader {
-    margin: 30px;
-}
-
-    #grid-container > .seperator {
-
-    display: grid;
-    grid-template-columns: repeat(2, minmax(250px,1fr));
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 5vh;
-    justify-content: center;
-    align-items: center;
-    background-color:#4b0808;
-    
- 
-}
-
-}

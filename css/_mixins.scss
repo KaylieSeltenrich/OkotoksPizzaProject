@@ -11,17 +11,36 @@
     background-color: #D10000;
 }
 
-
+@mixin fontlinkstyle() {
+    
+        text-align: center;
+        display: block;
+        font-size: 1.2em;
+        padding: 2%;
+        font-weight: bold;
+        color: rgb(143, 143, 143);
+        font-family: $header-fontstyle;
+}
 
 
 @mixin tablet-layout-fontnav() {
     @media only screen and (min-width:600px) {
       
-        font-size: 1.5em;
+        font-size: 1.3em;
               
     }
     
 }
+
+@mixin desktop-layout-fontnav() {
+    @media only screen and (min-width:1000px) {
+      
+        font-size: 1em;
+              
+    }
+    
+}
+
 
 
 @mixin tablet-layout-fontheader() {
@@ -65,25 +84,18 @@
 @mixin tablet-layout-fontparagraph() {
     @media only screen and (min-width:600px) {
       
-        font-size: 1.3em;
+        font-size: 1.5em;
               
     }
     
 }
 
-@mixin tablet-layout-fontcontact() {
-    @media only screen and (min-width:600px) {
-      
-        font-size: 0.7em;
-              
-    }
-    
-}
+
 
 @mixin tablet-layout-fontlinks() {
     @media only screen and (min-width:600px) {
       
-        font-size: 1em;
+    font-size: 1.8em;
               
     }
     

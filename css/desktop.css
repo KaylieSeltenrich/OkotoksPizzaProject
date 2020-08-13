@@ -20,8 +20,8 @@ h1 {
 #header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(250px, 1fr))[2];
-      grid-template-columns: repeat(2, minmax(250px, 1fr));
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -29,7 +29,7 @@ h1 {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  min-height: 5vh;
+  min-height: 10vh;
   text-align: center;
   background-color: #ffe6a7;
   font-family: "Magra", sans-serif;
@@ -37,27 +37,17 @@ h1 {
 
 @media only screen and (min-width: 600px) {
   #header {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 }
 
 #header img {
-  margin: 10px;
-  width: 20%;
+  left: 15vw;
+  width: 25%;
+  z-index: 100;
 }
 
 #header h2 {
-  display: -ms-grid;
-  display: grid;
-  font-size: 1em;
-  color: black;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 95%;
-}
-
-#header h2 .regular {
   display: none;
 }
 
@@ -69,12 +59,10 @@ h1 {
   padding: 2px;
   margin: 2px;
   background-color: #D10000;
+  display: none;
 }
 
-/* Navigation bar rules  */
-#navbar {
-  position: -webkit-sticky;
-  position: sticky;
+#header #navbar-desktop {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
@@ -87,30 +75,34 @@ h1 {
           justify-content: center;
   text-align: center;
   width: 100%;
-  min-height: 7vh;
+  min-height: 10vh;
   background-color: #c3a068;
   top: 0;
   z-index: 100;
   font-family: "Magra", sans-serif;
-  /* Navigation links  */
 }
 
-@media only screen and (min-width: 600px) {
-  #navbar {
-    font-size: 1.5em;
+@media only screen and (min-width: 1000px) {
+  #header #navbar-desktop {
+    font-size: 1em;
   }
 }
 
-#navbar a {
+#header #navbar-desktop a {
   color: black;
   font-weight: bold;
   text-decoration: none;
 }
 
-#navbar a:hover {
+#header #navbar-desktop a:hover {
   color: white;
   background-color: #4b0808;
   margin: 10px;
+}
+
+/* Navigation bar rules  */
+#navbar {
+  display: none;
 }
 
 /* Content Rules */
@@ -118,17 +110,20 @@ h1 {
   height: auto;
   /* Header that displays important info meant to stand out on front of page  */
   /* Regular paragraph font styling  */
-  /* Image styling */
 }
 
 #content .boldheader {
+  position: relative;
+  width: 50%;
+  left: 25%;
+  right: 25%;
   font-size: 1em;
   text-align: center;
-  margin: 5px;
-  padding: 5px;
   color: #D10000;
   border: solid #D10000 1px;
+  background-color: white;
   font-family: "Asap", sans-serif;
+  z-index: 5;
 }
 
 @media only screen and (min-width: 600px) {
@@ -138,12 +133,13 @@ h1 {
 }
 
 #content p {
+  position: relative;
+  top: 20vh;
   font-weight: bold;
-  width: 85%;
-  margin: 5%;
-  padding: 10px;
+  margin: 10%;
+  width: 100%;
   text-align: justify;
-  z-index: 1;
+  z-index: 2;
   background-color: white;
   font-size: 0.9em;
   font-family: "Asar", serif;
@@ -152,7 +148,7 @@ h1 {
 
 @media only screen and (min-width: 600px) {
   #content p {
-    font-size: 1.3em;
+    font-size: 1.5em;
   }
 }
 
@@ -168,7 +164,13 @@ h1 {
 
 @media only screen and (min-width: 600px) {
   #content p a {
-    font-size: 1em;
+    text-align: center;
+    display: block;
+    font-size: 1.2em;
+    padding: 2%;
+    font-weight: bold;
+    color: #8f8f8f;
+    font-family: "Asap", sans-serif;
   }
 }
 
@@ -186,7 +188,7 @@ h1 {
 
 @media only screen and (min-width: 600px) {
   #content h1 p {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
 }
 
@@ -200,10 +202,17 @@ h1 {
 
 @media only screen and (min-width: 600px) {
   #content h1 p > a {
-    font-size: 1em;
+    text-align: center;
+    display: block;
+    font-size: 1.2em;
+    padding: 2%;
+    font-weight: bold;
+    color: #8f8f8f;
+    font-family: "Asap", sans-serif;
   }
 }
 
+/* Image styling */
 .rounded-image {
   display: block;
   width: 90%;
@@ -217,16 +226,17 @@ h1 {
 }
 
 #pizza-image {
+  position: absolute;
   display: block;
-  width: 95%;
-  height: 50vh;
+  bottom: 15vh;
+  width: 100%;
+  height: 35vh;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 40% 40%;
      object-position: 40% 40%;
-  margin-top: 10vw;
-  margin-bottom: 10vw;
-  border-radius: 5%;
+  z-index: -1;
+  border-radius: 0%;
 }
 
 /* Responsive iframe  */
@@ -348,6 +358,9 @@ h1 {
 
 /* Footer Rules */
 #footer {
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
   margin-top: 10vh;
   display: -ms-grid;
   display: grid;
@@ -364,82 +377,7 @@ h1 {
 
 @media only screen and (min-width: 600px) {
   #footer {
-    font-size: 1.5em;
-  }
-}
-
-/* Tablet display only  */
-@media only screen and (min-width: 600px) {
-  h1 {
-    margin: 10vh;
-  }
-  #header {
-    /* Making phone link no longer clickable  */
-  }
-  #header h2 > p {
-    display: none;
-  }
-  #header .clickable {
-    display: none;
-  }
-  #header h2 > .regular {
-    font-size: 1.5em;
-    text-decoration: none;
-    color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    padding: 2px;
-    margin: 2px;
-    background-color: #D10000;
-    display: block;
-  }
-  #header img {
-    position: relative;
-    left: 30px;
-    margin: 15px;
-    width: 50%;
-  }
-  #content > #pizza-image {
-    position: relative;
-    display: block;
-    width: 90%;
-    height: 80vh;
-    bottom: 10vh;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: 40% 40%;
-       object-position: 40% 40%;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    border-radius: 5%;
-  }
-  #content > p {
-    padding: 30px;
-    margin: 30px;
-  }
-  #content > h1 p {
-    width: 90%;
-  }
-  #content > h1 {
-    margin: 5vh;
-  }
-  #content > .boldheader {
-    margin: 30px;
-  }
-  #grid-container > .seperator {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (minmax(250px, 1fr))[2];
-        grid-template-columns: repeat(2, minmax(250px, 1fr));
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 5vh;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background-color: #4b0808;
+    font-size: 1.3em;
   }
 }
 /*# sourceMappingURL=desktop.css.map */

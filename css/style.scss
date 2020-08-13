@@ -55,13 +55,20 @@ h2 {
      @include phonenumber-style();  
     }
 
- }
+}
+
+#navbar-desktop {
+display:none;
 
 }
+ }
+
+
 
 /* Navigation bar rules  */
 
 #navbar {
+
 position: sticky;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr; 
@@ -82,6 +89,7 @@ a {
     color:black;
     font-weight: bold;
     text-decoration: none;
+    @include tablet-layout-fontnav();
 
 
     &:hover {
@@ -130,18 +138,13 @@ a {
         font-family: $paragraph-fontstyle;
         @include tablet-layout-fontparagraph ();
         
+    }
 
     /* Link Styling */
 
         a {
-            text-align: center;
-            display: block;
-            font-size: 1.2em;
-            padding: 2%;
-            font-weight: bold;
-            color: rgb(143, 143, 143);
-            font-family: $header-fontstyle;
-            @include tablet-layout-fontlinks;
+            @include fontlinkstyle ();
+            @include tablet-layout-fontlinks ();
             
             
 
@@ -151,40 +154,27 @@ a {
  
         }
        
-    }
 
     h1 {
-       
+
         p {
 
         font-size: 0.5em;
         text-align: center;
-        padding: 5px;
-        width: 85%;
+        width:  85%;
         font-family: $paragraph-fontstyle;
-        @include tablet-layout-fontcontact ();
-
-        }
-
-        p > a {
-        
-            font-size: 1em;
-            text-align: center;
-            padding: 5px;
-            width: 100%;
-            font-family: $paragraph-fontstyle;
-            @include tablet-layout-fontlinks();
         
         }
+    }
 
+       
     }
 
     
     
-    
     /* Image styling */
     
-}
+
      .rounded-image {
 
         display: block;
@@ -346,9 +336,9 @@ a {
 
 @media only screen and (min-width:600px) {
    
-h1 {
-    margin: 10vh;
-}
+     h1 {
+        margin: 5vh;
+    }
 
 #header {
     
@@ -381,43 +371,14 @@ h1 {
 }
 
 
-#content > #pizza-image
-
-{
-    position: relative;
-    display: block;
-    width: 90%;
-    height: 80vh;
-    bottom: 10vh;
-    object-fit: cover;
-    object-position: 40% 40%;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    border-radius: 5%;
-
-}
-
-#content > p {
-
-    padding:30px;
-    margin:30px;
-}
-
-#content >  h1 p {
-
-    width: 90%;
-
-    
+#content > .boldheader {
+margin: 30px;
 }
 
 #content > h1 {
-
-margin: 5vh;
+    margin: 0;
 }
 
-#content > .boldheader {
-    margin: 30px;
-}
 
     #grid-container > .seperator {
 

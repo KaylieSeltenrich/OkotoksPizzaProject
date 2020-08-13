@@ -37,7 +37,7 @@ h1 {
 
 @media only screen and (min-width: 600px) {
   #header {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 }
 
@@ -71,6 +71,10 @@ h1 {
   background-color: #D10000;
 }
 
+#header #navbar-desktop {
+  display: none;
+}
+
 /* Navigation bar rules  */
 #navbar {
   position: -webkit-sticky;
@@ -97,7 +101,7 @@ h1 {
 
 @media only screen and (min-width: 600px) {
   #navbar {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 }
 
@@ -105,6 +109,12 @@ h1 {
   color: black;
   font-weight: bold;
   text-decoration: none;
+}
+
+@media only screen and (min-width: 600px) {
+  #navbar a {
+    font-size: 1.3em;
+  }
 }
 
 #navbar a:hover {
@@ -118,7 +128,7 @@ h1 {
   height: auto;
   /* Header that displays important info meant to stand out on front of page  */
   /* Regular paragraph font styling  */
-  /* Image styling */
+  /* Link Styling */
 }
 
 #content .boldheader {
@@ -147,16 +157,15 @@ h1 {
   background-color: white;
   font-size: 0.9em;
   font-family: "Asar", serif;
-  /* Link Styling */
 }
 
 @media only screen and (min-width: 600px) {
   #content p {
-    font-size: 1.3em;
+    font-size: 1.5em;
   }
 }
 
-#content p a {
+#content a {
   text-align: center;
   display: block;
   font-size: 1.2em;
@@ -167,43 +176,23 @@ h1 {
 }
 
 @media only screen and (min-width: 600px) {
-  #content p a {
-    font-size: 1em;
+  #content a {
+    font-size: 1.8em;
   }
 }
 
-#content p a:active {
+#content a:active {
   color: #D10000;
 }
 
 #content h1 p {
   font-size: 0.5em;
   text-align: center;
-  padding: 5px;
   width: 85%;
   font-family: "Asar", serif;
 }
 
-@media only screen and (min-width: 600px) {
-  #content h1 p {
-    font-size: 0.7em;
-  }
-}
-
-#content h1 p > a {
-  font-size: 1em;
-  text-align: center;
-  padding: 5px;
-  width: 100%;
-  font-family: "Asar", serif;
-}
-
-@media only screen and (min-width: 600px) {
-  #content h1 p > a {
-    font-size: 1em;
-  }
-}
-
+/* Image styling */
 .rounded-image {
   display: block;
   width: 90%;
@@ -364,14 +353,14 @@ h1 {
 
 @media only screen and (min-width: 600px) {
   #footer {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 }
 
 /* Tablet display only  */
 @media only screen and (min-width: 600px) {
   h1 {
-    margin: 10vh;
+    margin: 5vh;
   }
   #header {
     /* Making phone link no longer clickable  */
@@ -398,32 +387,11 @@ h1 {
     margin: 15px;
     width: 50%;
   }
-  #content > #pizza-image {
-    position: relative;
-    display: block;
-    width: 90%;
-    height: 80vh;
-    bottom: 10vh;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: 40% 40%;
-       object-position: 40% 40%;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    border-radius: 5%;
-  }
-  #content > p {
-    padding: 30px;
-    margin: 30px;
-  }
-  #content > h1 p {
-    width: 90%;
-  }
-  #content > h1 {
-    margin: 5vh;
-  }
   #content > .boldheader {
     margin: 30px;
+  }
+  #content > h1 {
+    margin: 0;
   }
   #grid-container > .seperator {
     display: -ms-grid;
