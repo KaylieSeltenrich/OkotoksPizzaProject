@@ -117,6 +117,7 @@ h1 {
   display: grid;
   height: auto;
   /* Header that displays important info meant to stand out on front of page  */
+  /* Contact Page */
   /* Regular paragraph font styling  */
   /* Link Styling */
   /* Image styling */
@@ -157,8 +158,8 @@ h1 {
   margin-left: 10%;
   margin-top: 5%;
   margin-bottom: 5%;
-  border: black solid 5px;
-  grid-gap: 5px;
+  border: black solid 2px;
+  grid-gap: 2px;
   background-color: black;
 }
 
@@ -169,19 +170,25 @@ h1 {
 }
 
 #content #desktoptable h1 {
-  text-align: left;
-  -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
+  text-align: center;
+  width: 95%;
+  padding: 2%;
 }
 
 #content #desktoptable p, #content #desktoptable a {
-  text-align: left;
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
   font-size: 1.5em;
+  margin: auto;
+  width: 95%;
+  padding: 2%;
+  margin: 0;
 }
 
 #content #desktoptable .contactheader {
   margin: auto;
+  padding: 2%;
 }
 
 #content p {
@@ -200,13 +207,10 @@ h1 {
   font-family: "Asap", sans-serif;
   width: 95%;
   margin: 5%;
+  font-size: 2em;
   margin: auto;
-}
-
-@media only screen and (min-width: 600px) {
-  #content a {
-    font-size: 1.5em;
-  }
+  padding: 2%;
+  width: 80%;
 }
 
 #content a:active {

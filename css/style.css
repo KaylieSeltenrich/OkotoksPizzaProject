@@ -182,7 +182,7 @@ h1 {
 
 @media only screen and (min-width: 600px) {
   #content a {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 }
 
@@ -384,6 +384,47 @@ h1 {
     margin: 2px;
     background-color: #D10000;
     display: block;
+  }
+  #content #desktoptable {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: black solid 2px;
+    grid-gap: 2px;
+    background-color: black;
+  }
+  #content #desktoptable .contactborder {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  }
+  #content #desktoptable h1 {
+    text-align: center;
+    width: 95%;
+    padding: 2%;
+  }
+  #content #desktoptable p, #content #desktoptable a {
+    display: -ms-grid;
+    display: grid;
+    text-align: center;
+    font-size: 1.5em;
+    margin: auto;
+    width: 95%;
+    padding: 2%;
+    margin: 0;
+  }
+  #content #desktoptable .contactheader {
+    margin: auto;
+    padding: 2%;
   }
   #grid-container > .seperator {
     display: -ms-grid;
