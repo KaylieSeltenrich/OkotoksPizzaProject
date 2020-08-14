@@ -6,13 +6,14 @@
 h1 {
   color: #4b0808;
   text-align: center;
-  margin: 20px;
+  margin: 10% 5% 10% 5%;
+  width: 90%;
   font-family: "Asap", sans-serif;
 }
 
 @media only screen and (min-width: 600px) {
   h1 {
-    font-size: 3em;
+    font-size: 2.3em;
   }
 }
 
@@ -20,8 +21,8 @@ h1 {
 #header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(80px, 1fr))[2];
-      grid-template-columns: repeat(2, minmax(80px, 1fr));
+  -ms-grid-columns: (minmax(80px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -129,13 +130,18 @@ h1 {
   /* Header that displays important info meant to stand out on front of page  */
   /* Regular paragraph font styling  */
   /* Link Styling */
+  /* Contact Page */
+  /* Image styling */
+  /* Responsive iframe  */
 }
 
 #content .boldheader {
   font-size: 1em;
   text-align: center;
-  margin: 5px;
-  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5%;
+  width: 80%;
   color: #D10000;
   border: solid #D10000 1px;
   font-family: "Asap", sans-serif;
@@ -149,11 +155,9 @@ h1 {
 
 #content p {
   font-weight: bold;
-  width: 85%;
-  margin: 5%;
-  padding: 10px;
+  width: 90%;
+  margin: 10% 5% 10% 5%;
   text-align: justify;
-  z-index: 1;
   background-color: white;
   font-size: 0.9em;
   font-family: "Asar", serif;
@@ -161,23 +165,24 @@ h1 {
 
 @media only screen and (min-width: 600px) {
   #content p {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 }
 
 #content a {
   text-align: center;
   display: block;
-  font-size: 1.2em;
-  padding: 2%;
+  font-size: 1.5em;
   font-weight: bold;
   color: #8f8f8f;
   font-family: "Asap", sans-serif;
+  width: 95%;
+  margin: 5%;
 }
 
 @media only screen and (min-width: 600px) {
   #content a {
-    font-size: 1.8em;
+    font-size: 1.5em;
   }
 }
 
@@ -185,15 +190,27 @@ h1 {
   color: #D10000;
 }
 
-#content h1 p {
-  font-size: 0.5em;
+#content .contactheader {
+  width: 95%;
+  margin: 5%;
   text-align: center;
-  width: 85%;
+}
+
+#content .contactinfo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 95%;
+  text-align: center;
   font-family: "Asar", serif;
 }
 
-/* Image styling */
-.rounded-image {
+@media only screen and (min-width: 600px) {
+  #content .contactinfo {
+    font-size: 1.2em;
+  }
+}
+
+#content .rounded-image {
   display: block;
   width: 90%;
   height: 60vh;
@@ -205,35 +222,26 @@ h1 {
   border-radius: 10%;
 }
 
-#pizza-image {
+#content #pizza-image {
   display: block;
-  width: 95%;
-  height: 50vh;
+  width: 90%;
+  height: 40vh;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 40% 40%;
      object-position: 40% 40%;
-  margin-top: 10vw;
-  margin-bottom: 10vw;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
   border-radius: 5%;
 }
 
-/* Responsive iframe  */
-.iframe-container {
-  position: relative;
-  overflow: hidden;
+#content .iframe-container {
   width: 100%;
-  height: 30vh;
-  padding-top: 56.25%;
+  height: 80vh;
 }
 
-.iframe-container .responsive-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: 5vw;
+#content .responsive-iframe {
+  margin-left: 5%;
   width: 90%;
   height: 100%;
 }
@@ -337,7 +345,7 @@ h1 {
 
 /* Footer Rules */
 #footer {
-  margin-top: 10vh;
+  margin-top: 5vh;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -357,11 +365,7 @@ h1 {
   }
 }
 
-/* Tablet display only  */
 @media only screen and (min-width: 600px) {
-  h1 {
-    margin: 5vh;
-  }
   #header {
     /* Making phone link no longer clickable  */
   }
@@ -380,18 +384,6 @@ h1 {
     margin: 2px;
     background-color: #D10000;
     display: block;
-  }
-  #header img {
-    position: relative;
-    left: 30px;
-    margin: 15px;
-    width: 50%;
-  }
-  #content > .boldheader {
-    margin: 30px;
-  }
-  #content > h1 {
-    margin: 0;
   }
   #grid-container > .seperator {
     display: -ms-grid;

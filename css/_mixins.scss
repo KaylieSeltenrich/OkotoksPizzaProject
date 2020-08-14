@@ -15,11 +15,12 @@
     
         text-align: center;
         display: block;
-        font-size: 1.2em;
-        padding: 2%;
+        font-size: 1.5em;
         font-weight: bold;
         color: rgb(143, 143, 143);
         font-family: $header-fontstyle;
+        width: 95%;
+        margin: 5%;
 }
 
 
@@ -46,7 +47,7 @@
 @mixin tablet-layout-fontheader() {
     @media only screen and (min-width:600px) {
       
-        font-size: 3em;
+        font-size: 2.3em;
               
     }
     
@@ -84,7 +85,7 @@
 @mixin tablet-layout-fontparagraph() {
     @media only screen and (min-width:600px) {
       
-        font-size: 1.5em;
+        font-size: 1.2em;
               
     }
     
@@ -95,7 +96,7 @@
 @mixin tablet-layout-fontlinks() {
     @media only screen and (min-width:600px) {
       
-    font-size: 1.8em;
+    font-size: 1.5em;
               
     }
     

@@ -11,9 +11,9 @@
 h1 {
     color: #4b0808;
     text-align: center;
-    margin: 20px;
+    margin: 50px;
     font-family: $header-fontstyle;
-    @include tablet-layout-fontheader();
+    font-size: 3em;
       
 }
 
@@ -23,31 +23,48 @@ h1 {
 
 #header {
 
+position: sticky;
+top:0;
+z-index: 100;
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+grid-template-columns: 1fr 1fr 2fr;
 align-items: center;
 justify-content: center;
 width: 100%;
-min-height: 10vh;
+height: auto;
 text-align: center;
 background-color: #ffe6a7;
 font-family: $other-fontstyle;
 @include tablet-layout-fontnav();
+justify-items: center;
+
+
 
 
 
 
 
 img {
-    left: 15vw;
-    width: 25%;
-    z-index:100;
-   
-
+    
+    height: auto;
+    width: auto;
+    max-height: 150px;
 }
 
 h2 {
-    display: none;
+    
+    width: 90%;
+    text-align: center;
+   
+    
+
+    .regular {
+        padding: 5%;
+        margin: 5%;
+       
+        align-content: center;
+    }
+    
     
    
     .clickable {
@@ -60,7 +77,7 @@ h2 {
 
 #navbar-desktop {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -80,7 +97,6 @@ h2 {
     
         &:hover {
             color: white;
-            background-color: #4b0808;
             margin: 10px;
         }
 
@@ -90,66 +106,86 @@ h2 {
 }
 
 
-
-/* Navigation bar rules  */
-
 #navbar {
     display: none;
 }
 
 
+
+
+
 /* Content Rules */
 
 #content {
-   
+
+    display: grid;
     height: auto;
     
    /* Header that displays important info meant to stand out on front of page  */
 
     .boldheader {
         position: relative;
-        width: 50%;
-        left: 25%;
-        right: 25%;
         font-size: 1em;
         text-align: center;
+        padding: 10px;
+        margin: 5%;
+        width: 70%;
         color:#D10000;
         border: solid #D10000 1px;
-        background-color: white;
         font-family: $header-fontstyle;
         @include tablet-layout-fontboldheader();
-        z-index: 5;
+        background-color: white;
+        left: 10vw;
+        right: 10vw;
 
 
     }
+
+  #desktoptable {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      align-items: center;
+    
+      
+      h1 {
+          
+          text-align: right;
+          align-self: end;
+          
+      }
+
+      p, a { 
+          text-align: left;
+          
+          
+        }
+
+        .contactheader {
+            margin: auto;
+        }
+  }
+
+
+
     
     /* Regular paragraph font styling  */
 
     p {
-        position: relative;
-        top: 20vh;
+       
         font-weight: bold;
-        margin: 10%;
-        width: 100%;
-        text-align: justify; 
-        z-index: 2;
         background-color: white;
-        font-size: 0.9em;
+        font-size: 1.5em;
         font-family: $paragraph-fontstyle;
-        @include tablet-layout-fontparagraph ();
+       
         
+    }
 
     /* Link Styling */
 
         a {
-            text-align: center;
-            display: block;
-            font-size: 1.2em;
-            padding: 2%;
-            font-weight: bold;
-            color: rgb(143, 143, 143);
-            font-family: $header-fontstyle;
-            @include tablet-layout-fontlinks;
+            @include fontlinkstyle ();
+            @include tablet-layout-fontlinks ();
             
             
 
@@ -159,36 +195,10 @@ h2 {
  
         }
        
-    }
 
-    h1 {
-       
-        p {
+
       
-        font-size: 0.5em;
-        text-align: center;
-        padding: 5px;
-        width: 85%;
-        font-family: $paragraph-fontstyle;
-        @include tablet-layout-fontcontact ();
-
-        }
-
-        p > a {
         
-            font-size: 1em;
-            text-align: center;
-            padding: 5px;
-            width: 100%;
-            font-family: $paragraph-fontstyle;
-            @include tablet-layout-fontlinks();
-        
-        }
-
-    }
-}
-    
-    
     
     /* Image styling */
     
@@ -196,27 +206,25 @@ h2 {
      .rounded-image {
 
         display: block;
-        width: 90%;
+        width: 40%;
         height: 60vh;
         object-fit: cover;
-        object-position: 20% 20%;
         margin: auto;
         border-radius: 10%;
-        
+
     
     }
 
     #pizza-image {
-
         position: absolute;
+        top: 10vh;
         display: block;
-        bottom: 15vh;
         width: 100%;
-        height: 35vh;
+        height: 50vh;
         object-fit: cover;
         object-position: 40% 40%;
+        border-radius: 5%;
         z-index: -1;
-        border-radius: 0%;
       
     
     }
@@ -226,32 +234,27 @@ h2 {
 
 .iframe-container {
     
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        height: 30vh;
-        padding-top: 56.25%; 
-      
- .responsive-iframe {
+    width: 100%;
+    height: 80vh;
 
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: 5vw;
-  width: 90%;
-  height: 100%;
-  
-
-    }
 }
+
+.responsive-iframe {
+
+width: 90%;
+height: 100%;
+
+}
+
+}
+
+
     
 /* Menu rules  */
 
 #grid-container > .seperator {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     width: 90%;
     margin-left: 5%;
     margin-top: 5vh;
@@ -289,9 +292,9 @@ h2 {
 
     .menu-image {
         
-        width:95%;
-        margin: 3%;
-        height:30vh;
+        width:90%;
+        margin: 10%;
+        height:40vh;
         object-fit: cover;
         
         }
@@ -336,10 +339,8 @@ h2 {
 /* Footer Rules */
 
 #footer {
-    z-index: 100;
-    position: fixed; 
-    bottom: 0;
-    margin-top: 10vh;
+    
+    margin-top: 5vh;
     display: grid;
     align-items: center;
     width: 100%;
@@ -349,8 +350,5 @@ h2 {
     font-size: small;
     font-family: $header-fontstyle;
     @include tablet-layout-fontnav();
-    
    
 }
-
-

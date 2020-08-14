@@ -6,22 +6,21 @@
 h1 {
   color: #4b0808;
   text-align: center;
-  margin: 20px;
+  margin: 50px;
   font-family: "Asap", sans-serif;
-}
-
-@media only screen and (min-width: 600px) {
-  h1 {
-    font-size: 3em;
-  }
+  font-size: 3em;
 }
 
 /* Header rules  */
 #header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -ms-grid-columns: 1fr 1fr 2fr;
+      grid-template-columns: 1fr 1fr 2fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -29,10 +28,11 @@ h1 {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  min-height: 10vh;
+  height: auto;
   text-align: center;
   background-color: #ffe6a7;
   font-family: "Magra", sans-serif;
+  justify-items: center;
 }
 
 @media only screen and (min-width: 600px) {
@@ -42,13 +42,21 @@ h1 {
 }
 
 #header img {
-  left: 15vw;
-  width: 25%;
-  z-index: 100;
+  height: auto;
+  width: auto;
+  max-height: 150px;
 }
 
 #header h2 {
-  display: none;
+  width: 90%;
+  text-align: center;
+}
+
+#header h2 .regular {
+  padding: 5%;
+  margin: 5%;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 #header h2 .clickable {
@@ -96,34 +104,38 @@ h1 {
 
 #header #navbar-desktop a:hover {
   color: white;
-  background-color: #4b0808;
   margin: 10px;
 }
 
-/* Navigation bar rules  */
 #navbar {
   display: none;
 }
 
 /* Content Rules */
 #content {
+  display: -ms-grid;
+  display: grid;
   height: auto;
   /* Header that displays important info meant to stand out on front of page  */
   /* Regular paragraph font styling  */
+  /* Link Styling */
+  /* Image styling */
+  /* Responsive iframe  */
 }
 
 #content .boldheader {
   position: relative;
-  width: 50%;
-  left: 25%;
-  right: 25%;
   font-size: 1em;
   text-align: center;
+  padding: 10px;
+  margin: 5%;
+  width: 70%;
   color: #D10000;
   border: solid #D10000 1px;
-  background-color: white;
   font-family: "Asap", sans-serif;
-  z-index: 5;
+  background-color: white;
+  left: 10vw;
+  right: 10vw;
 }
 
 @media only screen and (min-width: 600px) {
@@ -132,129 +144,90 @@ h1 {
   }
 }
 
+#content #desktoptable {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#content #desktoptable h1 {
+  text-align: right;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+#content #desktoptable p, #content #desktoptable a {
+  text-align: left;
+}
+
+#content #desktoptable .contactheader {
+  margin: auto;
+}
+
 #content p {
-  position: relative;
-  top: 20vh;
   font-weight: bold;
-  margin: 10%;
-  width: 100%;
-  text-align: justify;
-  z-index: 2;
   background-color: white;
-  font-size: 0.9em;
+  font-size: 1.5em;
   font-family: "Asar", serif;
-  /* Link Styling */
+}
+
+#content a {
+  text-align: center;
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #8f8f8f;
+  font-family: "Asap", sans-serif;
+  width: 95%;
+  margin: 5%;
 }
 
 @media only screen and (min-width: 600px) {
-  #content p {
+  #content a {
     font-size: 1.5em;
   }
 }
 
-#content p a {
-  text-align: center;
-  display: block;
-  font-size: 1.2em;
-  padding: 2%;
-  font-weight: bold;
-  color: #8f8f8f;
-  font-family: "Asap", sans-serif;
-}
-
-@media only screen and (min-width: 600px) {
-  #content p a {
-    text-align: center;
-    display: block;
-    font-size: 1.2em;
-    padding: 2%;
-    font-weight: bold;
-    color: #8f8f8f;
-    font-family: "Asap", sans-serif;
-  }
-}
-
-#content p a:active {
+#content a:active {
   color: #D10000;
 }
 
-#content h1 p {
-  font-size: 0.5em;
-  text-align: center;
-  padding: 5px;
-  width: 85%;
-  font-family: "Asar", serif;
-}
-
-@media only screen and (min-width: 600px) {
-  #content h1 p {
-    font-size: 0.8em;
-  }
-}
-
-#content h1 p > a {
-  font-size: 1em;
-  text-align: center;
-  padding: 5px;
-  width: 100%;
-  font-family: "Asar", serif;
-}
-
-@media only screen and (min-width: 600px) {
-  #content h1 p > a {
-    text-align: center;
-    display: block;
-    font-size: 1.2em;
-    padding: 2%;
-    font-weight: bold;
-    color: #8f8f8f;
-    font-family: "Asap", sans-serif;
-  }
-}
-
-/* Image styling */
-.rounded-image {
+#content .rounded-image {
   display: block;
-  width: 90%;
+  width: 40%;
   height: 60vh;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 20% 20%;
-     object-position: 20% 20%;
   margin: auto;
   border-radius: 10%;
 }
 
-#pizza-image {
+#content #pizza-image {
   position: absolute;
+  top: 10vh;
   display: block;
-  bottom: 15vh;
   width: 100%;
-  height: 35vh;
+  height: 50vh;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 40% 40%;
      object-position: 40% 40%;
+  border-radius: 5%;
   z-index: -1;
-  border-radius: 0%;
 }
 
-/* Responsive iframe  */
-.iframe-container {
-  position: relative;
-  overflow: hidden;
+#content .iframe-container {
   width: 100%;
-  height: 30vh;
-  padding-top: 56.25%;
+  height: 80vh;
 }
 
-.iframe-container .responsive-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: 5vw;
+#content .responsive-iframe {
   width: 90%;
   height: 100%;
 }
@@ -263,8 +236,8 @@ h1 {
 #grid-container > .seperator {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   width: 90%;
   margin-left: 5%;
   margin-top: 5vh;
@@ -309,9 +282,9 @@ h1 {
 }
 
 #grid-container > .seperator .menu-image {
-  width: 95%;
-  margin: 3%;
-  height: 30vh;
+  width: 90%;
+  margin: 10%;
+  height: 40vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -358,10 +331,7 @@ h1 {
 
 /* Footer Rules */
 #footer {
-  z-index: 100;
-  position: fixed;
-  bottom: 0;
-  margin-top: 10vh;
+  margin-top: 5vh;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
