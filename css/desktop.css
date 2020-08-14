@@ -6,7 +6,8 @@
 h1 {
   color: #4b0808;
   text-align: center;
-  margin: 50px;
+  margin-top: 5%;
+  margin-bottom: 5%;
   font-family: "Asap", sans-serif;
   font-size: 3em;
 }
@@ -85,7 +86,6 @@ h1 {
   width: 100%;
   min-height: 10vh;
   background-color: #c3a068;
-  top: 0;
   z-index: 100;
   font-family: "Magra", sans-serif;
 }
@@ -97,14 +97,20 @@ h1 {
 }
 
 #header #navbar-desktop a {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: black;
   font-weight: bold;
   text-decoration: none;
+  height: 10vh;
 }
 
 #header #navbar-desktop a:hover {
   color: white;
-  margin: 10px;
+  background-color: #4b0808;
 }
 
 #navbar {
@@ -113,8 +119,6 @@ h1 {
 
 /* Content Rules */
 #content {
-  display: -ms-grid;
-  display: grid;
   height: auto;
   /* Header that displays important info meant to stand out on front of page  */
   /* Contact Page */
@@ -191,11 +195,62 @@ h1 {
   padding: 2%;
 }
 
+#content #desktop-indexgrid {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#content #desktop-indexgrid img {
+  width: 100%;
+  height: 30vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 #content p {
   font-weight: bold;
   background-color: white;
   font-size: 1.5em;
   font-family: "Asar", serif;
+  margin: 5%;
+}
+
+#content .aboutus {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin: 0;
+  text-align: center;
+}
+
+#content .about {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+  padding: 5%;
+  margin: auto;
+}
+
+#content .about .rounded-image {
+  display: block;
+  width: 95%;
+  height: 60vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10%;
+  margin: 5%;
 }
 
 #content a {
@@ -215,16 +270,6 @@ h1 {
 
 #content a:active {
   color: #D10000;
-}
-
-#content .rounded-image {
-  display: block;
-  width: 40%;
-  height: 60vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin: auto;
-  border-radius: 10%;
 }
 
 #content #pizza-image {
@@ -255,8 +300,8 @@ h1 {
 #grid-container > .seperator {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -ms-grid-columns: (minmax(250px, 1fr))[2];
+      grid-template-columns: repeat(2, minmax(250px, 1fr));
   width: 90%;
   margin-left: 5%;
   margin-top: 5vh;
@@ -267,6 +312,7 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   background-color: #4b0808;
+  /* Footer Rules */
 }
 
 #grid-container > .seperator h3 {
@@ -276,7 +322,7 @@ h1 {
   background-color: #4b0808;
   color: white;
   margin: 3%;
-  width: 95%;
+  width: 50%;
   top: 0%;
   height: 30vh;
   -webkit-box-pack: center;
@@ -301,19 +347,22 @@ h1 {
 }
 
 #grid-container > .seperator .menu-image {
-  width: 90%;
-  margin: 10%;
-  height: 40vh;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 50%;
+  margin: 5%;
+  -webkit-transition-property: all 0.25s ease-in;
+  transition-property: all 0.25s ease-in;
 }
 
-.menu-description {
+#grid-container > .seperator .menu-image:hover {
+  width: 100%;
+}
+
+#grid-container > .seperator .menu-description {
   display: -ms-grid;
   display: grid;
   position: absolute;
-  margin: 3%;
-  width: 95%;
+  margin: 5%;
+  width: 50%;
   top: 0%;
   height: 30vh;
   opacity: 0;
@@ -332,24 +381,24 @@ h1 {
 }
 
 @media only screen and (min-width: 600px) {
-  .menu-description {
+  #grid-container > .seperator .menu-description {
     font-size: 1.5em;
   }
 }
 
-.menu-description:active {
+#grid-container > .seperator .menu-description:hover {
   background-color: rgba(255, 255, 255, 0.8);
   opacity: 1;
+  width: 100%;
 }
 
-.menu-name {
-  margin: 3%;
+#grid-container > .seperator .menu-name {
+  width: 55%;
   color: white;
   font-size: 1.5em;
 }
 
-/* Footer Rules */
-#footer {
+#grid-container > .seperator #footer {
   margin-top: 5vh;
   display: -ms-grid;
   display: grid;
@@ -365,7 +414,7 @@ h1 {
 }
 
 @media only screen and (min-width: 600px) {
-  #footer {
+  #grid-container > .seperator #footer {
     font-size: 1.3em;
   }
 }

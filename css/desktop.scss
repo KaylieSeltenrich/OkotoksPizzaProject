@@ -11,7 +11,8 @@
 h1 {
     color: #4b0808;
     text-align: center;
-    margin: 50px;
+    margin-top: 5%;
+    margin-bottom: 5%;
     font-family: $header-fontstyle;
     font-size: 3em;
       
@@ -72,27 +73,34 @@ h2 {
 
 #navbar-desktop {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
     justify-content: center;
     text-align: center;
     width: 100%;
     min-height: 10vh;
     background-color: #c3a068;
-    top:0;
     z-index:100;
     font-family: $other-fontstyle;
     @include desktop-layout-fontnav();
+ 
 
     a { 
+        display: grid;
+        align-items: center;
         color:black;
         font-weight: bold;
         text-decoration: none;
+        height: 10vh;
+       
+        
+        
     
     
         &:hover {
             color: white;
-            margin: 10px;
+            background-color: #4b0808;
+            
         }
 
     }
@@ -113,7 +121,7 @@ h2 {
 
 #content {
 
-    display: grid;
+   
     height: auto;
     
    /* Header that displays important info meant to stand out on front of page  */
@@ -191,6 +199,27 @@ h2 {
         
   }
 
+
+  #desktop-indexgrid {
+
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-left: 10%;
+  margin-right: 10%;
+  
+
+  img {
+
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+  
+  }
+
+
+  }
+
     
     /* Regular paragraph font styling  */
 
@@ -200,9 +229,42 @@ h2 {
         background-color: white;
         font-size: 1.5em;
         font-family: $paragraph-fontstyle;
+        margin: 5%;
        
         
     }
+
+    .aboutus {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        margin: 0;
+        text-align: center;
+
+        }
+        
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    align-items: top;
+    padding: 5%;
+    margin:auto;
+ 
+  
+
+    .rounded-image {
+
+        display: block;
+        width: 95%;
+        height: 60vh;
+        object-fit: cover;
+        border-radius: 10%;
+        margin: 5%;
+    
+    }
+
+
+
+}
 
     /* Link Styling */
 
@@ -228,18 +290,6 @@ h2 {
     
     /* Image styling */
     
-
-     .rounded-image {
-
-        display: block;
-        width: 40%;
-        height: 60vh;
-        object-fit: cover;
-        margin: auto;
-        border-radius: 10%;
-
-    
-    }
 
     #pizza-image {
         position: absolute;
@@ -280,13 +330,14 @@ height: 100%;
 
 #grid-container > .seperator {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(2, minmax(250px,1fr));
     width: 90%;
     margin-left: 5%;
     margin-top: 5vh;
     justify-content: center;
     align-items: center;
     background-color:#4b0808;
+    
     
  
 
@@ -296,35 +347,37 @@ height: 100%;
         background-color: #4b0808;
         color: white;
         margin:3%;
-        width: 95%;
+        width: 50%;
         top: 0%;
         height: 30vh;
         justify-content: center;
         align-items: center;
         font-family: $header-fontstyle;
         @include tablet-layout-fontmenu();
+    
        
     }
 
    
     
     #card-container {
+        
         display: grid;
         position: relative;
         
- 
 
     }
 
     .menu-image {
         
-        width:90%;
-        margin: 10%;
-        height:40vh;
-        object-fit: cover;
-        
+        width:50%;
+        margin: 5%;
+        transition-property: all 0.25s ease-in;
+
+        &:hover {
+            width: 100%;
         }
-    
+       
     }
 
     
@@ -332,8 +385,8 @@ height: 100%;
 
         display: grid;
         position: absolute;
-        margin:3%;
-        width: 95%;
+        margin:5%;
+        width: 50%;
         top: 0%;
         height: 30vh;
         opacity: 0;
@@ -348,15 +401,16 @@ height: 100%;
        
     
         
-        &:active {
+        &:hover {
             background-color: rgba(255, 255, 255, 0.8);
             opacity:1;
+            width: 100%;
         }
 
        }
 
        .menu-name {
-           margin:3%;
+           width: 55%;
            color: white;
            font-size: 1.5em;
           
@@ -377,4 +431,6 @@ height: 100%;
     font-family: $header-fontstyle;
     @include tablet-layout-fontnav();
    
+}
+
 }

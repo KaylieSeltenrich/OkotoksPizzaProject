@@ -135,6 +135,10 @@ h1 {
   /* Responsive iframe  */
 }
 
+#content #desktop-indexgrid {
+  display: none;
+}
+
 #content .boldheader {
   font-size: 1em;
   text-align: center;
@@ -220,6 +224,8 @@ h1 {
      object-position: 20% 20%;
   margin: auto;
   border-radius: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 #content #pizza-image {

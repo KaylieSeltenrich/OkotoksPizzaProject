@@ -109,6 +109,13 @@ a {
 #content {
    
     height: auto;
+
+
+
+    #desktop-indexgrid {
+
+        display: none;
+    }
     
    /* Header that displays important info meant to stand out on front of page  */
 
@@ -194,6 +201,8 @@ a {
         object-position: 20% 20%;
         margin: auto;
         border-radius: 10%;
+        margin-top: 5%;
+        margin-bottom: 5%;
 
     
     }
