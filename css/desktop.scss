@@ -204,11 +204,12 @@ h2 {
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 2%;
   margin-left: 10%;
   margin-right: 10%;
   
   p {
-      padding: 5%;
+    
       font-size: 1.5em;
       text-align: center;
   }
@@ -219,8 +220,8 @@ h2 {
     width: 100%;
     height: 40vh;
     object-fit: cover;
-    padding: 5%;
-  
+    border-radius: 10%;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5), 0 6px 25px 0 rgba(0, 0, 0, 0.5);
   }
 
 
@@ -236,6 +237,8 @@ h2 {
         font-size: 1.5em;
         font-family: $paragraph-fontstyle;
         margin: 5%;
+        text-align: justify;
+        padding: 2px;
        
         
     }

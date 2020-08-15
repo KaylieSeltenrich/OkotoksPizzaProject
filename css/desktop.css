@@ -205,12 +205,13 @@ h1 {
           align-items: center;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  -webkit-column-gap: 2%;
+          column-gap: 2%;
   margin-left: 10%;
   margin-right: 10%;
 }
 
 #content #desktop-indexgrid p {
-  padding: 5%;
   font-size: 1.5em;
   text-align: center;
 }
@@ -220,7 +221,9 @@ h1 {
   height: 40vh;
   -o-object-fit: cover;
      object-fit: cover;
-  padding: 5%;
+  border-radius: 10%;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5), 0 6px 25px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5), 0 6px 25px 0 rgba(0, 0, 0, 0.5);
 }
 
 #content p {
@@ -229,6 +232,8 @@ h1 {
   font-size: 1.5em;
   font-family: "Asar", serif;
   margin: 5%;
+  text-align: justify;
+  padding: 2px;
 }
 
 #content .homepage-text {
