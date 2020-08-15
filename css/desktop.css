@@ -217,6 +217,7 @@ h1 {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   -webkit-column-gap: 2%;
           column-gap: 2%;
+  margin-top: 10%;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -250,14 +251,14 @@ h1 {
   position: relative;
   top: 10vh;
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: white;
   font-size: 1.5em;
   font-family: "Asar", serif;
   margin-top: 15%;
 }
 
 #content .homepage-text a {
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 #content .aboutus {
