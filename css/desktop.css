@@ -9,7 +9,6 @@ h1 {
   margin-top: 5%;
   margin-bottom: 5%;
   font-family: "Asap", sans-serif;
-  font-size: 4em;
 }
 
 /* HEADER RULES  */
@@ -179,6 +178,10 @@ h1 {
   background-color: black;
 }
 
+#content #desktoptable .contactinfo-container {
+  font-size: 1em;
+}
+
 #content #desktoptable .contactborder {
   width: 100%;
   height: 100%;
@@ -215,15 +218,15 @@ h1 {
           align-items: center;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  -webkit-column-gap: 2%;
-          column-gap: 2%;
-  margin-top: 10%;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+  margin-top: 25%;
   margin-left: 10%;
   margin-right: 10%;
 }
 
 #content #desktop-indexgrid p {
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-align: center;
 }
 
@@ -249,16 +252,18 @@ h1 {
 
 #content .homepage-text {
   position: relative;
-  top: 10vh;
+  top: 35vh;
   font-weight: bold;
-  background-color: white;
-  font-size: 1.5em;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 1.8em;
   font-family: "Asar", serif;
-  margin-top: 15%;
+  margin-left: 5%;
+  margin-top: 0;
 }
 
 #content .homepage-text a {
-  margin-bottom: 5%;
+  margin-top: 2%;
+  font-size: 1.3em;
 }
 
 #content .aboutus {
@@ -315,15 +320,18 @@ h1 {
 #content #pizza-image {
   position: absolute;
   top: 10vh;
+  margin: 0;
   display: block;
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 40% 40%;
      object-position: 40% 40%;
   border-radius: 5%;
   z-index: -1;
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
 }
 
 #content .iframe-container {

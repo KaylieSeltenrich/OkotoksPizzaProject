@@ -154,7 +154,8 @@ h1 {
 	}
     
     /* CONTACT PAGE */
-    
+	
+	
     .contactheader {
 		width: 90%;
 		text-align: center;
@@ -165,7 +166,7 @@ h1 {
 		width: 90%;
 		text-align: center;
 		font-family: $paragraph-fontstyle;
-		@include tablet-layout-fontparagraph();
+		font-size: 1em;
 
 	.contactinfo {
 		text-align: center;
