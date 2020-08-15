@@ -142,15 +142,6 @@ h1 {
 		grid-gap: 2px;
 		background-color: black;
 
-		.contactinfo-container {
-			display: grid;
-			justify-content: center;
-			width: 100%;
-			text-align: center;
-			font-family: $paragraph-fontstyle;
-			@include tablet-layout-fontparagraph();
-		
-		}
         
         .contactborder {
 			width: 100%;
