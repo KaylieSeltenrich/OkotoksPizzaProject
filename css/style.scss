@@ -1,451 +1,371 @@
 @import '_variables';
 @import '_mixins';
-
-
 * {
-    margin:0;
-    padding:0;
-    
+	margin: 0;
+	padding: 0;
 }
 
 h1 {
-    color: #4b0808;
-    text-align: center;
-    margin: 10% 5% 10% 5%;
-    width: 90%;
-    font-family: $header-fontstyle;
-    @include tablet-layout-fontheader();
-      
+	color: #4b0808;
+	text-align: center;
+	margin: 10% 5% 10% 5%;
+	width: 90%;
+	font-family: $header-fontstyle;
+	@include tablet-layout-fontheader();
 }
 
-/* Header rules  */
+
+/* HEADER RULES  */
 
 #header {
-
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(80px,1fr));
-align-items: center;
-justify-content: center;
-width: 100%;
-min-height: 10vh;
-text-align: center;
-background-color: #ffe6a7;
-font-family: $other-fontstyle;
-@include tablet-layout-fontnav();
-
-
-
-img {
-    margin: 10px;
-    width: 60%;
-
-}
-
-h2 {
-    display: grid;
-    font-size: 1em;
-    color: black;
-    align-items: center;
-    width:95%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 10vh;
+	text-align: center;
+	background-color: #ffe6a7;
+	font-family: $other-fontstyle;
+	@include tablet-layout-fontnav();
     
-    .regular {
-        display: none;
-    }
+    /* Logo */
     
-    .clickable {
-     @include phonenumber-style();  
-    }
-
+    img {
+		margin: 10px;
+		width: 60%;
+	}
+    
+    /* Phone number container */
+    
+    h2 {
+		display: grid;
+		font-size: 1em;
+		color: black;
+		align-items: center;
+		width: 95%;
+        
+        /* Hiding non-clickable phone number */
+        
+        .regular {
+			display: none;
+		}
+        
+        /* Making sure clickable phone number shows on mobile*/
+        
+        .clickable {
+			@include phonenumber-style();
+		}
+	}
+    
+    /* Hiding desktop navigation bar */
+    
+    #navbar-desktop {
+		display: none;
+	}
 }
 
-#navbar-desktop {
-display:none;
 
-}
-
-}
-
-
-
-/* Navigation bar rules  */
+/* Navigation bar rules for mobile */
 
 #navbar {
-
-position: sticky;
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr; 
-align-items: center;
-justify-content: center;
-text-align: center;
-width: 100%;
-min-height: 7vh;
-background-color: #c3a068;
-top:0;
-z-index:100;
-font-family: $other-fontstyle;
-@include tablet-layout-fontnav();
-
-/* Navigation links  */
-
-a { 
-    color:black;
-    font-weight: bold;
-    text-decoration: none;
-    @include tablet-layout-fontnav();
-
-
-    &:hover {
-        color: white;
-        background-color: #4b0808;
-        margin: 10px;
-    }
+	position: sticky;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	min-height: 7vh;
+	background-color: #c3a068;
+	top: 0;
+	z-index: 100;
+	font-family: $other-fontstyle;
+	@include tablet-layout-fontnav();
     
+    /* Navigation links  */
+    
+    a {
+		color: black;
+		font-weight: bold;
+		text-decoration: none;
+		@include tablet-layout-fontnav();
+		&:hover {
+			color: white;
+			background-color: #4b0808;
+			margin: 10px;
+		}
+	}
 }
 
-}
 
-/* Content Rules */
+/* CONTENT RULES */
 
 #content {
-   
-    height: auto;
-
-
-
+	height: auto;
+    
     #desktop-indexgrid {
-
-        display: none;
-    }
+		display: none;
+	}
     
-    
-   /* Header that displays important info meant to stand out on front of page  */
-
-    .boldheader {
-
-        font-size: 1em;
-        text-align: center;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        padding: 5%;
-        width: 80%;
-        color:#D10000;
-        border: solid #D10000 1px;
-        font-family: $header-fontstyle;
-        @include tablet-layout-fontboldheader();
-
-
-    }
-
-  
-
+    /* Header that displays important info meant to stand out on front of page  */
+	.boldheader {
+		font-size: 1em;
+		text-align: center;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		padding: 5%;
+		width: 80%;
+		color: #D10000;
+		border: solid #D10000 1px;
+		font-family: $header-fontstyle;
+		@include tablet-layout-fontboldheader();
+	}
     
     /* Regular paragraph font styling  */
-
+    
     p {
-       
-        font-weight: bold;
-        width: 90%;
-        margin: 10% 5% 10% 5%;
-        text-align: justify; 
-        background-color: white;
-        font-size: 0.9em;
-        font-family: $paragraph-fontstyle;
-        @include tablet-layout-fontparagraph ();
-        
-    }
-
+		font-weight: bold;
+		width: 90%;
+		margin: 10% 5% 10% 5%;
+		text-align: justify;
+		background-color: white;
+		font-size: 0.9em;
+		font-family: $paragraph-fontstyle;
+		@include tablet-layout-fontparagraph ();
+	}
+    
     /* Link Styling */
-
-        a {
-            @include fontlinkstyle ();
-            @include tablet-layout-fontlinks ();
-            
-            
-
-            &:active {
-                color: #D10000;
-            }
- 
-        }
-       
-     /* Contact Page */
-
+    
+    a {
+		@include fontlinkstyle ();
+		@include tablet-layout-fontlinks ();
+		&:active {
+			color: #D10000;
+		}
+	}
+    
+    /* CONTACT PAGE */
+    
     .contactheader {
-        
-        width: 95%;
-        margin:5%;
-        text-align: center;
-    }
-
-
-        .contactinfo {
-            
-        margin-top: 20px;
-        margin-bottom: 20px;
-        width: 95%;
-        text-align: center;
-        font-family: $paragraph-fontstyle;
-        @include tablet-layout-fontparagraph();
-        
-         }
-        
+		width: 95%;
+		margin: 5%;
+		text-align: center;
+	}
+    
+    .contactinfo {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		width: 95%;
+		text-align: center;
+		font-family: $paragraph-fontstyle;
+		@include tablet-layout-fontparagraph();
+	}
     
     /* Image styling */
     
-
-     .rounded-image {
-
-        display: block;
-        width: 90%;
-        height: 60vh;
-        object-fit: cover;
-        object-position: 20% 20%;
-        margin: auto;
-        border-radius: 10%;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5), 0 6px 25px 0 rgba(0, 0, 0, 0.5);
-
+    .rounded-image {
+		display: block;
+		width: 90%;
+		height: 60vh;
+		object-fit: cover;
+		object-position: 20% 20%;
+		margin: auto;
+		border-radius: 10%;
+		margin-top: 5%;
+		margin-bottom: 5%;
+		box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5), 0 6px 25px 0 rgba(0, 0, 0, 0.5);
+	}
     
-    }
-
     #pizza-image {
-
-        display: block;
-        width: 90%;
-        height: 40vh;
-        object-fit: cover;
-        object-position: 40% 40%;
-        margin-top: 5vw;
-        margin-bottom: 5vw;
-        border-radius: 5%;
-      
+		display: block;
+		width: 90%;
+		height: 40vh;
+		object-fit: cover;
+		object-position: 40% 40%;
+		margin-top: 5vw;
+		margin-bottom: 5vw;
+		border-radius: 5%;
+	}
     
-    }
+    /* Responsive iframe  */
     
-
-/* Responsive iframe  */
-
-.iframe-container {
+    .iframe-container {
+		width: 100%;
+		height: 80vh;
+	}
     
-  
-    width: 100%;
-    height: 80vh;
-}
-
-.responsive-iframe {
-margin-left: 5%;
-width: 90%;
-height: 100%;
-
-}
-
+    .responsive-iframe {
+		margin-left: 5%;
+		width: 90%;
+		height: 100%;
+	}
 }
 
 
-    
-/* Menu rules  */
+/* MENU PAGE */
 
-#grid-container > .seperator {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 5vh;
-    justify-content: center;
-    align-items: center;
-    background-color:#4b0808;
+#grid-container>.seperator {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 5vh;
+	justify-content: center;
+	align-items: center;
+	background-color: #4b0808;
     
- 
-
     h3 {
-        display: grid;
-        text-align: center;
-        background-color: #4b0808;
-        color: white;
-        margin:3%;
-        width: 95%;
-        top: 0%;
-        height: 30vh;
-        justify-content: center;
-        align-items: center;
-        font-family: $header-fontstyle;
-        @include tablet-layout-fontmenu();
-       
-    }
-
-   
+		display: grid;
+		text-align: center;
+		background-color: #4b0808;
+		color: white;
+		margin: 3%;
+		width: 95%;
+		top: 0%;
+		height: 30vh;
+		justify-content: center;
+		align-items: center;
+		font-family: $header-fontstyle;
+		@include tablet-layout-fontmenu();
+	}
     
     #card-container {
-        display: grid;
-        position: relative;
-        
- 
-
-    }
-
+		display: grid;
+		position: relative;
+	}
+    
     .menu-image {
-        
-        width:95%;
-        margin: 3%;
-        height:30vh;
-        object-fit: cover;
-        
-        }
+		width: 95%;
+		margin: 3%;
+		height: 30vh;
+		object-fit: cover;
+	}
+}
+
+.menu-description {
+	display: grid;
+	position: absolute;
+	margin: 3%;
+	width: 95%;
+	top: 0%;
+	height: 30vh;
+	opacity: 0;
+	text-align: center;
+	font-size: 0.8em;
+	background-color: white;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.25s ease-in-out;
+	font-family: $paragraph-fontstyle;
+	@include tablet-layout-fontdescription();
     
-    }
+    &:active {
+		background-color: rgba(255, 255, 255, 0.8);
+		opacity: 1;
+	}
+}
 
-    
-    .menu-description {
+.menu-name {
+	margin: 3%;
+	color: white;
+	font-size: 1.5em;
+}
 
-        display: grid;
-        position: absolute;
-        margin:3%;
-        width: 95%;
-        top: 0%;
-        height: 30vh;
-        opacity: 0;
-        text-align: center;
-        font-size: 0.8em;
-        background-color:white;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.25s ease-in-out;
-        font-family: $paragraph-fontstyle;
-        @include tablet-layout-fontdescription();
-       
-    
-        
-        &:active {
-            background-color: rgba(255, 255, 255, 0.8);
-            opacity:1;
-        }
-
-       }
-
-       .menu-name {
-           margin:3%;
-           color: white;
-           font-size: 1.5em;
-          
-       }
 
 /* Footer Rules */
 
 #footer {
-    
-    margin-top: 5vh;
-    display: grid;
-    align-items: center;
-    width: 100%;
-    min-height: 7vh;
-    text-align: center;
-    background-color: #c3a068;
-    font-size: small;
-    font-family: $header-fontstyle;
-    @include tablet-layout-fontnav();
-   
+	margin-top: 5vh;
+	display: grid;
+	align-items: center;
+	width: 100%;
+	min-height: 7vh;
+	text-align: center;
+	background-color: #c3a068;
+	font-size: small;
+	font-family: $header-fontstyle;
+	@include tablet-layout-fontnav();
 }
 
 
+/* TABLET SCREEN RULES ONLY */
 
 @media only screen and (min-width:600px) {
-
-
-#header {
-   
-   /* Making phone link no longer clickable  */
-
-    h2 > p {
-       display: none;
-
-   }
-
-   .clickable {
-       display: none;
-   }
-
-   h2 > .regular {
-       @include phonenumber-style();  
-       display: block;
-
-   }
-
-   
-}
-
-
-#content {
-
-    #desktoptable {
-        display: grid;
-        grid-template-columns: 1fr 1fr; 
-        justify-items: center;
-        align-items: center;
-        width: 80%;
-        margin-left: 10%;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        border: black solid 2px; 
-        grid-gap: 2px;
-  
-        background-color: black;
+	#header {
         
-        .contactborder {
-         width: 100%;
-         height: 100%;
-         background-color: white;
+        /* Making phone link no longer clickable  */
         
-  
-       
+        h2 > p {
+			display: none;
+		}
+        
+        .clickable {
+			display: none;
         }
-       
-      
         
-        h1 {
-  
-            text-align: center;
-            width: 95%;
-            padding: 2%;
-          
-            
-            
-        }
-  
-        p, a { 
-            display: grid;
-            text-align: center;
-            font-size: 1.5em; 
-            margin: auto;
-            width: 95%;
-            padding: 2%;
-            margin: 0;
-            
-          }
-  
-          .contactheader {
-              margin: auto;
-              padding: 2%;
-          }
-          
+		h2 > .regular {
+			@include phonenumber-style();
+			display: block;
+		}
     }
-  
-}
-
-
-
-
-   #grid-container > .seperator {
-
-   display: grid;
-   grid-template-columns: repeat(2, minmax(250px,1fr));
-   width: 90%;
-   margin-left: 5%;
-   margin-top: 5vh;
-   justify-content: center;
-   align-items: center;
-   background-color:#4b0808;
-   
-
-}
+    
+	/* Making Content page display the same as on desktop */
+    
+    #content {
+        
+        #desktoptable {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			justify-items: center;
+			align-items: center;
+			width: 80%;
+			margin-left: 10%;
+			margin-top: 5%;
+			margin-bottom: 5%;
+			border: black solid 2px;
+			grid-gap: 2px;
+			background-color: black;
+            
+            .contactborder {
+				width: 100%;
+				height: 100%;
+				background-color: white;
+			}
+            
+            h1 {
+				text-align: center;
+				width: 95%;
+				padding: 2%;
+			}
+            
+            p,a {
+				display: grid;
+				text-align: center;
+				font-size: 1.5em;
+				margin: auto;
+				width: 95%;
+				padding: 2%;
+				margin: 0;
+            }
+            
+			.contactheader {
+				margin: auto;
+				padding: 2%;
+			}
+		}
+    }
+    
+    /* minor changes to grid */
+    
+	#grid-container>.seperator {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(250px, 1fr));
+		width: 90%;
+		margin-left: 5%;
+		margin-top: 5vh;
+		justify-content: center;
+		align-items: center;
+		background-color: #4b0808;
+	}
 }

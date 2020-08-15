@@ -12,7 +12,7 @@ h1 {
   font-size: 4em;
 }
 
-/* Header rules  */
+/* HEADER RULES  */
 #header {
   position: -webkit-sticky;
   position: sticky;
@@ -34,6 +34,9 @@ h1 {
   background-color: #ffe6a7;
   font-family: "Magra", sans-serif;
   justify-items: center;
+  /* Logo */
+  /* Phone number container */
+  /* Navagation Bar for Desktop only */
 }
 
 @media only screen and (min-width: 600px) {
@@ -51,6 +54,8 @@ h1 {
 #header h2 {
   width: 90%;
   text-align: center;
+  /* Phone number for desktop (unclickable) */
+  /* Hiding mobile clickable phone number */
 }
 
 #header h2 .regular {
@@ -113,18 +118,23 @@ h1 {
   background-color: #4b0808;
 }
 
+/* Hiding tablet and mobile navigation bar */
 #navbar {
   display: none;
 }
 
-/* Content Rules */
+/* CONTENT RULES */
 #content {
   height: auto;
   /* Header that displays important info meant to stand out on front of page  */
-  /* Contact Page */
+  /* CONTACT PAGE */
+  /* Making contact information into a grid layout for desktop */
+  /* Index page grid layout for extra images */
   /* Regular paragraph font styling  */
+  /* Home page text */
+  /* ABOUT US PAGE */
   /* Link Styling */
-  /* Image styling */
+  /* Homepage image style*/
   /* Responsive iframe  */
 }
 
@@ -327,7 +337,7 @@ h1 {
   height: 100%;
 }
 
-/* Menu rules  */
+/* MENU PAGE  */
 #grid-container > .seperator {
   display: -ms-grid;
   display: grid;

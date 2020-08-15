@@ -17,7 +17,7 @@ h1 {
   }
 }
 
-/* Header rules  */
+/* HEADER RULES  */
 #header {
   display: -ms-grid;
   display: grid;
@@ -34,6 +34,9 @@ h1 {
   text-align: center;
   background-color: #ffe6a7;
   font-family: "Magra", sans-serif;
+  /* Logo */
+  /* Phone number container */
+  /* Hiding desktop navigation bar */
 }
 
 @media only screen and (min-width: 600px) {
@@ -56,6 +59,8 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   width: 95%;
+  /* Hiding non-clickable phone number */
+  /* Making sure clickable phone number shows on mobile*/
 }
 
 #header h2 .regular {
@@ -76,7 +81,7 @@ h1 {
   display: none;
 }
 
-/* Navigation bar rules  */
+/* Navigation bar rules for mobile */
 #navbar {
   position: -webkit-sticky;
   position: sticky;
@@ -124,13 +129,13 @@ h1 {
   margin: 10px;
 }
 
-/* Content Rules */
+/* CONTENT RULES */
 #content {
   height: auto;
   /* Header that displays important info meant to stand out on front of page  */
   /* Regular paragraph font styling  */
   /* Link Styling */
-  /* Contact Page */
+  /* CONTACT PAGE */
   /* Image styling */
   /* Responsive iframe  */
 }
@@ -254,7 +259,7 @@ h1 {
   height: 100%;
 }
 
-/* Menu rules  */
+/* MENU PAGE */
 #grid-container > .seperator {
   display: -ms-grid;
   display: grid;
@@ -373,6 +378,7 @@ h1 {
   }
 }
 
+/* TABLET SCREEN RULES ONLY */
 @media only screen and (min-width: 600px) {
   #header {
     /* Making phone link no longer clickable  */
@@ -393,6 +399,7 @@ h1 {
     background-color: #D10000;
     display: block;
   }
+  /* Making Content page display the same as on desktop */
   #content #desktoptable {
     display: -ms-grid;
     display: grid;
@@ -434,6 +441,7 @@ h1 {
     margin: auto;
     padding: 2%;
   }
+  /* minor changes to grid */
   #grid-container > .seperator {
     display: -ms-grid;
     display: grid;

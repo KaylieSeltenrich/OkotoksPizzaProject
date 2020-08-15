@@ -1,472 +1,383 @@
 @import '_variables';
 @import '_mixins';
 
-
 * {
-    margin:0;
-    padding:0;
-    
+	margin: 0;
+	padding: 0;
 }
 
 h1 {
-    color: #4b0808;
-    text-align: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    font-family: $header-fontstyle;
-    font-size: 4em;
-      
+	color: #4b0808;
+	text-align: center;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	font-family: $header-fontstyle;
+	font-size: 4em;
 }
 
 
-
-/* Header rules  */
+/* HEADER RULES  */
 
 #header {
-
-position: sticky;
-top:0;
-z-index: 100;
-display: grid;
-grid-template-columns: 1fr 1fr 2fr;
-align-items: center;
-justify-content: center;
-width: 100%;
-height: auto;
-text-align: center;
-background-color: #ffe6a7;
-font-family: $other-fontstyle;
-@include tablet-layout-fontnav();
-justify-items: center;
-
-
-img {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	display: grid;
+	grid-template-columns: 1fr 1fr 2fr;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	background-color: #ffe6a7;
+	font-family: $other-fontstyle;
+	@include tablet-layout-fontnav();
+	justify-items: center;
     
-    height: auto;
-    width: auto;
-    max-height: 150px;
-}
-
-h2 {
+    /* Logo */
     
-    width: 90%;
-    text-align: center;
-   
+    img {
+		height: auto;
+		width: auto;
+		max-height: 150px;
+	}
     
-
-    .regular {
-        padding: 5%;
-        margin: 5%;
-       
-        align-content: center;
-    }
+    /* Phone number container */
     
-    
-   
-    .clickable {
-     @include phonenumber-style();
-     display:none;
-    }
-
-}
-
-
-#navbar-desktop {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    min-height: 10vh;
-    background-color: #c3a068;
-    z-index:100;
-    font-family: $other-fontstyle;
-    @include desktop-layout-fontnav();
- 
-
-    a { 
-        display: grid;
-        align-items: center;
-        color:black;
-        font-weight: bold;
-        text-decoration: none;
-        height: 10vh;
-       
+    h2 {
+		width: 90%;
+		text-align: center;
         
+        /* Phone number for desktop (unclickable) */
         
+        .regular {
+			padding: 5%;
+			margin: 5%;
+			align-content: center;
+		}
+        
+        /* Hiding mobile clickable phone number */
+        
+        .clickable {
+			@include phonenumber-style();
+			display: none;
+		}
+	}
     
+    /* Navagation Bar for Desktop only */
     
-        &:hover {
-            color: white;
-            background-color: #4b0808;
-            
-        }
-
-    }
-
+    #navbar-desktop {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		width: 100%;
+		min-height: 10vh;
+		background-color: #c3a068;
+		z-index: 100;
+		font-family: $other-fontstyle;
+		@include desktop-layout-fontnav();
+        
+        a {
+			display: grid;
+			align-items: center;
+			color: black;
+			font-weight: bold;
+			text-decoration: none;
+			height: 10vh;
+			&:hover {
+				color: white;
+				background-color: #4b0808;
+			}
+		}
+	}
 }
-}
 
+
+/* Hiding tablet and mobile navigation bar */
 
 #navbar {
-    display: none;
+	display: none;
 }
 
 
-/* Content Rules */
+/* CONTENT RULES */
 
 #content {
-
-   
-    height: auto;
+	height: auto;
     
-   /* Header that displays important info meant to stand out on front of page  */
-
+    /* Header that displays important info meant to stand out on front of page  */
+    
     .boldheader {
-        position: relative;
-        font-size: 1em;
-        text-align: center;
-        padding: 10px;
-        margin: 5%;
-        width: 70%;
-        color:#D10000;
-        border: solid #D10000 1px;
-        font-family: $header-fontstyle;
-        @include tablet-layout-fontboldheader();
-        background-color: white;
-        left: 10vw;
-        right: 10vw;
-        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5), 0 6px 25px 0 rgba(0, 0, 0, 0.5);
+		position: relative;
+		font-size: 1em;
+		text-align: center;
+		padding: 10px;
+		margin: 5%;
+		width: 70%;
+		color: #D10000;
+		border: solid #D10000 1px;
+		font-family: $header-fontstyle;
+		@include tablet-layout-fontboldheader();
+		background-color: white;
+		left: 10vw;
+		right: 10vw;
+		box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5), 0 6px 25px 0 rgba(0, 0, 0, 0.5);
+	}
+	/* CONTACT PAGE */
+    
+    /* Making contact information into a grid layout for desktop */
+    
+    #desktoptable {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-items: center;
+		align-items: center;
+		width: 80%;
+		margin-left: 10%;
+		margin-top: 5%;
+		margin-bottom: 5%;
+		border: black solid 2px;
+		grid-gap: 2px;
+		background-color: black;
         
-
-
+        .contactborder {
+			width: 100%;
+			height: 100%;
+			background-color: white;
+		}
+        
+        h1 {
+			text-align: center;
+			width: 95%;
+			padding: 2%;
+		}
+        
+        p,a {
+			display: grid;
+			text-align: center;
+			font-size: 1.5em;
+			margin: auto;
+			width: 95%;
+			padding: 2%;
+			margin: 0;
+        }
+        
+		.contactheader {
+			margin: auto;
+			padding: 2%;
+		}
     }
-
-    /* Contact Page */
-
-  #desktoptable {
-      display: grid;
-      grid-template-columns: 1fr 1fr; 
-      justify-items: center;
-      align-items: center;
-      width: 80%;
-      margin-left: 10%;
-      margin-top: 5%;
-      margin-bottom: 5%;
-      border: black solid 2px; 
-      grid-gap: 2px;
-
-      background-color: black;
-      
-      .contactborder {
-       width: 100%;
-       height: 100%;
-       background-color: white;
-      
-
-     
-      }
-     
     
-      
-      h1 {
-
-          text-align: center;
-          width: 95%;
-          padding: 2%;
-        
-          
-          
-      }
-
-      p, a { 
-          display: grid;
-          text-align: center;
-          font-size: 1.5em; 
-          margin: auto;
-          width: 95%;
-          padding: 2%;
-          margin: 0;
-          
-        }
-
-        .contactheader {
-            margin: auto;
-            padding: 2%;
-        }
-        
-  }
-
-
-  #desktop-indexgrid {
-
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  column-gap: 2%;
-  margin-left: 10%;
-  margin-right: 10%;
-  
-  p {
+	/* Index page grid layout for extra images */
     
-      font-size: 1.5em;
-      text-align: center;
-  }
-
-
-  img {
-
-    width: 100%;
-    height: 40vh;
-    object-fit: cover;
-    border-radius: 10%;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5), 0 6px 25px 0 rgba(0, 0, 0, 0.5);
-  }
-
-
-  }
-
+    #desktop-indexgrid {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+		column-gap: 2%;
+		margin-left: 10%;
+		margin-right: 10%;
+        
+        p {
+			font-size: 1.5em;
+			text-align: center;
+		}
+        
+        img {
+			width: 100%;
+			height: 40vh;
+			object-fit: cover;
+			border-radius: 10%;
+			box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5), 0 6px 25px 0 rgba(0, 0, 0, 0.5);
+		}
+	}
     
     /* Regular paragraph font styling  */
-
+    
     p {
-       
-        font-weight: bold;
-        background-color: white;
-        font-size: 1.5em;
-        font-family: $paragraph-fontstyle;
-        margin: 5%;
-        text-align: justify;
-        padding: 2px;
-       
-        
-    }
-
+		font-weight: bold;
+		background-color: white;
+		font-size: 1.5em;
+		font-family: $paragraph-fontstyle;
+		margin: 5%;
+		text-align: justify;
+		padding: 2px;
+	}
+    
+    /* Home page text */
+    
     .homepage-text {
-      
-            position: relative;
-            top: 10vh;
-            font-weight: bold;
-            background-color: rgba(255, 255, 255, 0);
-            font-size: 1.5em;
-            font-family: $paragraph-fontstyle;
-            margin-top: 15%;
-    
-    
-           a { 
-               margin-bottom: 10%;
-        }
-            
-
-    }
-
-    .aboutus {
-       
-        text-align: center;
-        font-size: 4em;
-
-        }
+		position: relative;
+		top: 10vh;
+		font-weight: bold;
+		background-color: rgba(255, 255, 255, 0);
+		font-size: 1.5em;
+		font-family: $paragraph-fontstyle;
+		margin-top: 15%;
         
-.about {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    align-items: center;
-    column-gap: 5%;
-  
-
-    .rounded-image {
-
-        display: block;
-        align-items: center;
-        width: 95%;
-        height: 50vh;
-        object-fit: cover;
-        border-radius: 10%;
-        margin: 5%;
-        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5), 0 6px 25px 0 rgba(0, 0, 0, 0.5);
-    
-    }
-
-
-
-}
-
-    /* Link Styling */
-
         a {
-            @include fontlinkstyle ();
-            font-size: 2em;
-            margin: auto;
-            padding: 2%;
-            width: 80%;
-            
-            
-
-            &:active {
-                color: #D10000;
-            }
- 
-        }
-       
-
-
-      
+			margin-bottom: 10%;
+		}
+	}
+    
+    /* ABOUT US PAGE */
+    
+    .aboutus {
+		text-align: center;
+		font-size: 4em;
+	}
+    
+    .about {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		column-gap: 5%;
         
+        .rounded-image {
+			display: block;
+			align-items: center;
+			width: 95%;
+			height: 50vh;
+			object-fit: cover;
+			border-radius: 10%;
+			margin: 5%;
+			box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5), 0 6px 25px 0 rgba(0, 0, 0, 0.5);
+		}
+	}
     
-    /* Image styling */
+    /* Link Styling */
     
-
+    a {
+		@include fontlinkstyle ();
+		font-size: 2em;
+		margin: auto;
+		padding: 2%;
+		width: 80%;
+		&:active {
+			color: #D10000;
+		}
+	}
+    
+    /* Homepage image style*/
+    
     #pizza-image {
-        position: absolute;
-        top: 10vh;
-        display: block;
-        width: 100%;
-        height: 50vh;
-        object-fit: cover;
-        object-position: 40% 40%;
-        border-radius: 5%;
-        z-index: -1;
-      
+		position: absolute;
+		top: 10vh;
+		display: block;
+		width: 100%;
+		height: 50vh;
+		object-fit: cover;
+		object-position: 40% 40%;
+		border-radius: 5%;
+		z-index: -1;
+	}
     
-    }
+    /* Responsive iframe  */
     
-
-/* Responsive iframe  */
-
-.iframe-container {
-    
-    width: 100%;
-    height: 70vh;
-    margin-left: 5%;
-margin-right: 5%;
-    
-}
-
-.responsive-iframe {
-
-
-width: 80%;
-height: 100%;
-
-}
-
+    .iframe-container {
+		width: 100%;
+		height: 70vh;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	.responsive-iframe {
+		width: 80%;
+		height: 100%;
+	}
 }
 
 
+/* MENU PAGE  */
+
+#grid-container>.seperator {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(80px, 1fr));
+	width: 90%;
+	column-gap: 5px;
+	row-gap: 5px;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	outline: solid #4b0808 5px;
     
-/* Menu rules  */
-
-#grid-container > .seperator {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(80px,1fr));
-    width: 90%;
-    column-gap: 5px;
-    row-gap: 5px;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    outline: solid #4b0808 5px; 
- 
-
     h3 {
-        display: grid;
-        text-align: center;
-        background-color: #4b0808;
-        color: white;
-        width: 90%;
-        height: 90%;
-        margin: 5%;
-        justify-content: center;
-        align-items: center;
-        font-family: $header-fontstyle;
-        @include tablet-layout-fontmenu();
-    
-       
-    }
-
-   
+		display: grid;
+		text-align: center;
+		background-color: #4b0808;
+		color: white;
+		width: 90%;
+		height: 90%;
+		margin: 5%;
+		justify-content: center;
+		align-items: center;
+		font-family: $header-fontstyle;
+		@include tablet-layout-fontmenu();
+	}
     
     #card-container {
-        
-        display: grid;
-        position: relative;
-        
-
-    }
-
+		display: grid;
+		position: relative;
+	}
+    
     .menu-image {
-        
-        width:70%;
-        margin: 5%;
-        object-fit: cover;
-        height: 30vh;
-        transition: all 0.25s ease-in-out;
+		width: 70%;
+		margin: 5%;
+		object-fit: cover;
+		height: 30vh;
+		transition: all 0.25s ease-in-out;
+	}
     
-       
-
-    }
+    .menu-description:hover~.menu-image {
+		width: 90%;
+	}
     
-    .menu-description:hover ~ .menu-image {
-        width: 90%;
-
-    }
-
     .menu-description:hover {
-        background-color: rgba(255, 255, 255, 0.8);
-        opacity:1;
-        width: 90%;
-        transition-delay: 0.5s;
-      
-        
-    }
-
-    .menu-description {
-
-        display: grid;
-        position: absolute;
-        margin:5%;
-        width: 70%;
-        top: 0%;
-        height: 30vh;
-        opacity: 0;
-        text-align: center;
-        font-size: 0.8em;
-        background-color:white;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.25s ease-in;
-        transition-delay: 0s;
-        font-family: $paragraph-fontstyle;
-        @include tablet-layout-fontdescription();
-       
-
-    }
-       .menu-name {
-           width: 80%;
-           color:  #4b0808;
-           font-size: 1.5em;
-           margin: 5%;
-           padding: 0;
-
-          
-       }
-
-/* Footer Rules */
-
-#footer {
+		background-color: rgba(255, 255, 255, 0.8);
+		opacity: 1;
+		width: 90%;
+		transition-delay: 0.5s;
+	}
     
-    margin-top: 5vh;
-    display: grid;
-    align-items: center;
-    width: 100%;
-    min-height: 7vh;
-    text-align: center;
-    background-color: #c3a068;
-    font-size: small;
-    font-family: $header-fontstyle;
-    @include tablet-layout-fontnav();
-   
-}
-
+    .menu-description {
+		display: grid;
+		position: absolute;
+		margin: 5%;
+		width: 70%;
+		top: 0%;
+		height: 30vh;
+		opacity: 0;
+		text-align: center;
+		font-size: 0.8em;
+		background-color: white;
+		justify-content: center;
+		align-items: center;
+		transition: all 0.25s ease-in;
+		transition-delay: 0s;
+		font-family: $paragraph-fontstyle;
+		@include tablet-layout-fontdescription();
+	}
+    
+    .menu-name {
+		width: 80%;
+		color: #4b0808;
+		font-size: 1.5em;
+		margin: 5%;
+		padding: 0;
+	}
+    
+    /* Footer Rules */
+	#footer {
+		margin-top: 5vh;
+		display: grid;
+		align-items: center;
+		width: 100%;
+		min-height: 7vh;
+		text-align: center;
+		background-color: #c3a068;
+		font-size: small;
+		font-family: $header-fontstyle;
+		@include tablet-layout-fontnav();
+	}
 }
